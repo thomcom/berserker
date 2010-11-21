@@ -1,100 +1,8 @@
 import random
-
-class_list = [
-      ["Wizard",        4, 25, 4],
-      ["Fighter",       12,0,  8],
-      ["Thief",         6, 0,  4],
-      ["Hero",          10,15, 6],
-      ["berserker",     6, 0,  20],
-      ["warlock",       2, 100,3]
-      ]
-
-spell_list = [
-      ["hurt",              5, 2],
-      ["hurt more",         10,6],
-      ["fireball",          6, 4],
-      ["frost",             6, 3],
-      ["lightning",         6, 5],
-      ["inferno",           50,14],
-      ["blizzard",          50,13],
-      ["lightning storm",   50,15]
-      ]
-
-monster_list = [
-      ["Goblin",        4, 0, 6],
-      ["Ogre",          10,0, 10],
-      ["Wolf",          8, 0, 8],
-      ["Ogre Mage",     8, 6, 12],
-      ["Dragon",        20,10,12]
-      ]
-
-name_i   = 0
-hp_i     = 1
-mp_i     = 2
-damage_i = 3
-
-spell_name_i    = 0
-spell_damage_i  = 1
-spell_mp_cost_i = 2
-
-class Player:
-  def __init__(self,name):
-     self.class_type = "Classless"
-     self.name       = name
-     self.max_hp     = 4
-     self.max_mp     = 0
-     self.damage     = 0
-     self.used_mp    = 0
-     self.attack_die = 2
-  def create(self,class_type):
-     self.class_type = class_type
-     for i in range( len( class_list ) ):
-        if( class_type == class_list[i][name_i] ):
-           self.max_hp     = class_list[i][hp_i]
-           self.max_mp     = class_list[i][mp_i]
-           self.attack_die = class_list[i][damage_i]
-  def display(self):
-     print("Name:  " + self.name)
-     print("Class: " + self.class_type)
-     print("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
-     print("MP:    " + str(self.max_mp-self.used_mp) + "/" + str(self.max_mp))
-  def damaged(self,amount):
-     self.damage = self.damage + amount
-  def healed(self,amount):
-     self.damage = self.damage - amount
-     if( self.damage < 0 ):
-        self.damage = 0
-  def get_name(self):
-     return self.name
-  def is_alive(self):
-     if( self.max_hp-self.damage > 0 ):
-        return True
-     else:
-        return False
-  def use_mp(self,amount):
-     self.used_mp = self.used_mp - amount
-  def get_mp(self):
-     return self.max_mp - self.used_mp
-  def get_hp(self):
-     return str(self.max_hp - self.damage) + "/" + str(self.max_hp)
-  def get_attack_damage(self):
-     return random.randint(1,self.attack_die)
-
-class Monster(Player):
-   def __init__(self,name="Monster"):
-      self.name = name
-      Player.__init__(self,self.name)
-      for i in range( len( monster_list ) ):
-         if( self.name == monster_list[i][name_i] ):
-            self.max_hp     = monster_list[i][hp_i]
-            self.max_mp     = monster_list[i][mp_i]
-            self.attack_die = monster_list[i][damage_i]
-   def display(self):
-      print("Type: " + self.name)
-      print("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
-      print("MP:    " + str(self.max_mp-self.used_mp) + "/" + str(self.max_mp))
-
-game_introduction = """Hello! Welcome to ComerGame!  ComerGame! is the awesomest text adventure roleplaying game you have ever played.
+import Player
+from Monster import Monster
+from Player import Player
+game_introduction = """Hello! Welcome to Berserkers and Warlocks!  Bererkers and Warlocks! is the awesomest text adventure roleplaying game you have ever played.
 
 Please enter your name: """
 
@@ -102,18 +10,18 @@ def run_game():
 
    # create game introduction, query user for player name
    player_name = raw_input( game_introduction )
-   print( "Welcome to ComerGame!, " + player_name )
+   print( "Welcome to Berserkers and Warlocks!, " + player_name )
    print( "Choose your class, " + player_name )
   
    # ask the user what class to play
-   for i in range(len(class_list)):
-      print( str(i+1) + " " + class_list[i][name_i] )
+   for i in range(Player.NumClasses()):
+      print( str(i+1) + " " + Player.GetClassName(i) )
    chosen_class = raw_input( "Enter the number of the class you want to play: " )
    chosen_class = int(chosen_class) - 1
 
    # create a new player using the chosen class
    the_player = Player(player_name)
-   the_player.create( class_list[chosen_class][name_i] )
+   the_player.create( Player.GetClassName(chosen_class) )
 
    # show the newly created
    the_player.display()
@@ -125,7 +33,8 @@ def run_game():
    # 4. resolve battle - monster attacks player, player does whatever they selected
   
    # create monster and display it
-   the_enemy = Monster(monster_list[random.randint( 0,len( monster_list )-1 )][name_i])
+   #the_enemy = Monster(monster_list[random.randint( 0,len( monster_list )-1 )][name_i])
+   the_enemy = Monster.RandomMonster()
    print("You've been attacked by a " + the_enemy.get_name() + "!")
   
    the_player = do_battle(the_player,the_enemy)
@@ -153,8 +62,8 @@ Choose an action: """
          print("You don't have any items! Make another choice.")
       if( choice == "2" ):
          if( player.get_mp() > 0 ):
-            for i in range( len( spell_list ) ):
-               print(str(i+1) + " " + spell_list[i][0] )
+            for i in range( Player.NumSpells() ):
+               print(str(i+1) + " " + Player.GetSpellName(i) )
             spell_choice = int(raw_input("choose a spell"))-1
             # we have the spell choice
             # now we need to compute mana used, and damage, and apply the same way
