@@ -1,23 +1,12 @@
 import random
-import Data
-
-#: Player class definition
-
-Data.name_i   = 0
-Data.hp_i     = 1
-Data.mp_i     = 2
-Data.damage_i = 3
-
-Data.spell_name_i    = 0
-Data.spell_damage_i  = 1
-spell_mp_cost_i = 2
+from Data import Data
 
 class Player:
   class_list = [
-    ["Wizard",        4,  25,   4],
-    ["Fighter",      12,   0,   8],
-    ["Thief",         6,   0,   4],
-    ["Hero",         10,  15,   6],
+    ["wizard",        4,  25,   4],
+    ["fighter",      12,   0,   8],
+    ["thief",         6,   0,   4],
+    ["hero",         10,  15,   6],
     ["berserker",     6,   0,  20],
     ["warlock",       5, 100,   3],
     ["knight",       20,   0,  10],
@@ -44,8 +33,15 @@ class Player:
   @classmethod
   def GetClassName(cls,index):
     return cls.class_list[index][Data.name_i]
+  @classmethod
   def GetSpellName(cls,index):
-    return self.spell_list[index][Data.spell_name_i]
+    return cls.spell_list[index][Data.spell_name_i]
+  @classmethod
+  def GetSpellDamage(cls,index):
+     return cls.spell_list[index][Data.spell_damage_i]
+  @classmethod
+  def GetSpellManaCost(cls,index):
+     return cls.spell_list[index][Data.spell_mp_cost_i]
   def __init__(self,name):
      self.class_type = "Classless"
      self.name       = name

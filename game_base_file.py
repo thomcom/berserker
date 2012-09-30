@@ -69,10 +69,10 @@ Choose an action: """
             # as an attack
             # TODO: player can cast spell if they have ANY mana, doesn't matter if
             # they have enough to cast it
-            player_damage  = random.randint(1,spell_list[spell_choice][spell_damage_i])
-            player.use_mp( spell_list[spell_choice][spell_mp_cost_i] )
+            player_damage  = random.randint(1,Player.GetSpellDamage(spell_choice))
+            player.use_mp( Player.GetSpellManaCost(spell_choice) ) 
             monster_damage = monster.get_attack_damage()
-            print("You cast " + spell_list[spell_choice][spell_name_i] + " for " + \
+            print("You cast " + Player.GetSpellName(spell_choice) + " for " + \
                   str(player_damage) + " damage!")
             return apply_damages(player,player_damage,monster,monster_damage)
          else:

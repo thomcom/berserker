@@ -1,18 +1,15 @@
 import Player
 from Player import Player
 import random
-import Data
-
-#Monster class definition
-
+from Data import Data
 
 class Monster(Player):
    monster_list = [
-      ["Goblin",        4, 0, 6],
-      ["Ogre",          10,0, 10],
-      ["Wolf",          8, 0, 8],
-      ["Ogre Mage",     8, 6, 12],
-      ["Dragon",        20,10,12]
+      ["goblin",        4, 0, 6],
+      ["ogre",          10,0, 10],
+      ["wolf",          8, 0, 8],
+      ["ogre mage",     8, 6, 12],
+      ["dragon",        20,10,12]
       ]
    @classmethod
    def GetRandomMonster(cls):
