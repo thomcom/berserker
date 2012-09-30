@@ -1,14 +1,15 @@
 import random
+import Data
 
-# Player class definition
+#: Player class definition
 
-name_i   = 0
-hp_i     = 1
-mp_i     = 2
-damage_i = 3
+Data.name_i   = 0
+Data.hp_i     = 1
+Data.mp_i     = 2
+Data.damage_i = 3
 
-spell_name_i    = 0
-spell_damage_i  = 1
+Data.spell_name_i    = 0
+Data.spell_damage_i  = 1
 spell_mp_cost_i = 2
 
 class Player:
@@ -30,8 +31,8 @@ class Player:
     ["frost",             6, 3],
     ["lightning",         6, 5],
     ["inferno",          50,14],
-    ["blizzard",         50 13],
-    ["lightning storm",  50 15]
+    ["blizzard",         50,13],
+    ["lightning storm",  50,15]
     ]
 
   @classmethod
@@ -41,10 +42,10 @@ class Player:
   def NumSpells(cls):
     return len(cls.spell_list)
   @classmethod
-  def GetClassName(cls,index)
-    return self.class_list[index][name_i]
-  def GetSpellName(cls,index)
-    return self.spell_list[index][spell_name_i]
+  def GetClassName(cls,index):
+    return cls.class_list[index][Data.name_i]
+  def GetSpellName(cls,index):
+    return self.spell_list[index][Data.spell_name_i]
   def __init__(self,name):
      self.class_type = "Classless"
      self.name       = name
@@ -55,16 +56,16 @@ class Player:
      self.attack_die = 2
   def create(self,class_type):
      self.class_type = class_type
-     for i in range( len( class_list ) ):
-        if( class_type == class_list[i][name_i] ):
-           self.max_hp     = class_list[i][hp_i]
-           self.max_mp     = class_list[i][mp_i]
-           self.attack_die = class_list[i][damage_i]
+     for i in range( len( self.class_list ) ):
+        if( class_type == self.class_list[i][Data.name_i] ):
+           self.max_hp     = self.class_list[i][Data.hp_i]
+           self.max_mp     = self.class_list[i][Data.mp_i]
+           self.attack_die = self.class_list[i][Data.damage_i]
   def display(self):
      print("Name:  " + self.name)
      print("Class: " + self.class_type)
      print("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
-     print("MP:    " + strself.max_mp-self.used_mp) + "/" + str(self.max_mp))
+     print("MP:    " + str(self.max_mp-self.used_mp) + "/" + str(self.max_mp))
   def damaged(self,amount):
      self.damage = self.damage + amount
   def healed(self,amount):

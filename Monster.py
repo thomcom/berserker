@@ -1,28 +1,30 @@
 import Player
 from Player import Player
+import random
+import Data
 
 #Monster class definition
 
-monster_list = [
+
+class Monster(Player):
+   monster_list = [
       ["Goblin",        4, 0, 6],
       ["Ogre",          10,0, 10],
       ["Wolf",          8, 0, 8],
       ["Ogre Mage",     8, 6, 12],
       ["Dragon",        20,10,12]
       ]
-
-class Monster(Player):
    @classmethod
    def GetRandomMonster(cls):
-      return Monster(monster_list[random.randint( 0,len(monster_list)-1 )][name_i]
+      return Monster(cls.monster_list[random.randint( 0,len(cls.monster_list)-1 )][Data.name_i])
    def __init__(self,name="Monster"):
       self.name = name
       Player.__init__(self,self.name)
-      for i in range( len( monster_list ) ):
-         if( self.name == monster_list[i][name_i] ):
-            self.max_hp     = monster_list[i][hp_i]
-            self.max_mp     = monster_list[i][mp_i]
-            self.attack_die = monster_list[i][damage_i]
+      for i in range( len( self.monster_list ) ):
+         if( self.name == self.monster_list[i][Data.name_i] ):
+            self.max_hp     = self.monster_list[i][Data.hp_i]
+            self.max_mp     = self.monster_list[i][Data.mp_i]
+            self.attack_die = self.monster_list[i][Data.damage_i]
    def display(self):
       print("Type: " + self.name)
       print("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))

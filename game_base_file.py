@@ -34,7 +34,7 @@ def run_game():
   
    # create monster and display it
    #the_enemy = Monster(monster_list[random.randint( 0,len( monster_list )-1 )][name_i])
-   the_enemy = Monster.RandomMonster()
+   the_enemy = Monster.GetRandomMonster()
    print("You've been attacked by a " + the_enemy.get_name() + "!")
   
    the_player = do_battle(the_player,the_enemy)
