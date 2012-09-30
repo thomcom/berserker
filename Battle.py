@@ -41,7 +41,7 @@ Choose an action: """
             if( player.get_mp() > 0 ):
                for i in range( Player.NumSpells() ):
                   print(str(i+1) + " " + Player.GetSpellName(i) )
-               spell_choice = int(raw_input("choose a spell"))-1
+               spell_choice = int(raw_input("Choose a spell: "))-1
                # we have the spell choice
                # now we need to compute mana used, and damage, and apply the same way
                # as an attack
@@ -58,13 +58,13 @@ Choose an action: """
          if( choice == "1" ):
             player_damage  = player.get_attack_damage()
             monster_damage = monster.get_attack_damage() 
-            monster.damaged( player_damage )
             print("You attack for " + str(player_damage) + " damage!")
             return self.apply_damages(player,player_damage,monster,monster_damage)
       return player
 
 
    def apply_damages(self,player,player_damage,monster,monster_damage):
+      monster.damaged( player_damage )      
       if( not monster.is_alive() ):
          print( "=== " + monster.get_name() + " is killed! ===")
          monster.reward(player)
