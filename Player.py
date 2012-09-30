@@ -3,25 +3,25 @@ from Data import Data
 
 class Player:
   class_list = [
-    ["wizard",        4,  25,   4],
-    ["fighter",      12,   0,   8],
-    ["thief",         6,   0,   4],
-    ["hero",         10,  15,   6],
-    ["berserker",     6,   0,  20],
-    ["warlock",       5, 100,   3],
-    ["knight",       20,   0,  10],
-    ["paladin",      10,   0,  15],
+    ["Wizard",        4,  25,   4],
+    ["Fighter",      12,   0,   8],
+    ["Thief",         6,   0,   4],
+    ["Hero",         10,  15,   6],
+    ["Berserker",     6,   0,  20],
+    ["Warlock",       5, 100,   3],
+    ["Knight",       20,   0,  10],
+    ["Paladin",      10,   0,  15],
     ]
 
   spell_list = [
-    ["hurt",              5, 2],
-    ["hurt more",        10, 6],
-    ["fireball",          6, 4],
-    ["frost",             6, 3],
-    ["lightning",         6, 5],
-    ["inferno",          50,14],
-    ["blizzard",         50,13],
-    ["lightning storm",  50,15]
+    ["Hurt",              5, 2],
+    ["Hurt more",        10, 6],
+    ["Fireball",          6, 4],
+    ["Frost",             6, 3],
+    ["Lightning",         6, 5],
+    ["Inferno",          50,14],
+    ["Blizzard",         50,13],
+    ["Lightning storm",  50,15]
     ]
 
   @classmethod
