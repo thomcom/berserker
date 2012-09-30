@@ -3,16 +3,24 @@ from Data import Data
 
 class Player:
   class_list = [
-    ["Wizard",        4,  25,   4],
-    ["Fighter",      12,   0,   8],
-    ["Thief",         6,   0,   4],
-    ["Hero",         10,  15,   6],
-    ["Berserker",     6,   0,  20],
-    ["Warlock",       5, 100,   3],
-    ["Knight",       20,   0,  10],
-    ["Paladin",      10,   0,  15],
+#name
+#starting hp
+#starting mp
+#starting damage
+#starting initiative
+    ["Wizard",        4,  25,   4, 2],
+    ["Fighter",      12,   0,   8, 3],
+    ["Thief",         6,   0,   4, 4],
+    ["Hero",         10,  15,   6, 3],
+    ["Berserker",     6,   0,  20, 1],
+    ["Warlock",       5, 100,   3, 2],
+    ["Knight",       20,   0,  10, 2],
+    ["Paladin",      10,   0,  15, 2],
     ]
 
+#name
+#damage 1-n
+#mp cost
   spell_list = [
     ["Hurt",              5, 2],
     ["Hurt more",        10, 6],
@@ -45,11 +53,14 @@ class Player:
   def __init__(self,name):
      self.class_type = "Classless"
      self.name       = name
+     self.level      = 1
+     self.xp         = 0 
      self.max_hp     = 4
      self.max_mp     = 0
      self.damage     = 0
      self.used_mp    = 0
      self.attack_die = 2
+     self.initiative = 1
   def create(self,class_type):
      self.class_type = class_type
      for i in range( len( self.class_list ) ):
@@ -60,6 +71,7 @@ class Player:
   def display(self):
      print("Name:  " + self.name)
      print("Class: " + self.class_type)
+     print("Level: " + str(self.level) + " Exp: " + str(self.xp))
      print("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
      print("MP:    " + str(self.max_mp-self.used_mp) + "/" + str(self.max_mp))
   def damaged(self,amount):
