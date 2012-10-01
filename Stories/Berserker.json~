@@ -1,0 +1,81 @@
+{ "mainstory" :
+   "name" : "berserker",
+   "events" : 
+   [
+      "zero" : 
+      {
+         "message" : "You travel north into frozen fields.  3 arctic rats think you are more delicious than the tubers you were sent to harvest."
+         "success" : "You bring 3 rat pelts and 60 pounds of tubers home to an ecstatic village."
+         "fail" : "The rats chase you home.  You pray to Khul that tubers remain there after you've regrouped."
+      }
+      "one" :
+      {
+         "message" : "Pleased with your work, the Chieftan orders you twice as far to harvest fallen nutritious pine cones."
+         "success" : "success"
+         "fail" : "fail"
+      }
+      "two" :
+      {
+         "message" : "Your village is attacked by a neighboring barbarian tribe!"
+         "success" : "success"
+         "fail" : "fail"
+      }
+      "three" :
+      {
+         "message" : "The chieftan struggles to defend your wife from four murderers."
+         "success" : "You crush their bones!  You are now the chieftan, and a widower."
+         "fail" : "fail"
+      }
+      "three" :
+      {
+         "message":     "You return to the camp of the bandits to repay their favor."
+         "success":     "You are now the chieftan of two tribes.  You have your choice of all the wives."  
+         "fail":     "fail"
+      }
+      "four" :
+      {
+         "message" : "The chieftans of two neighboring tribes challenge you simultaneously."
+         "success" : "You are the emperor berserker."
+         "fail" : "fail"
+      }
+      "five" :
+      {
+         "message" : "Lording over villages loses its taste."
+         "success" : "success"
+         "fail" : "fail"
+      }
+      "six" :
+      {
+         "message" : "You make your way into the Western wastes, seeking adventure.  Frost giants think to challenge your imperial rule."
+         "success" : "success"
+         "fail" : "fail"
+      }
+      "seven" :
+      {
+         "message" : "On a mountaintop you speak the words that unleash a terrible curse."
+         "success" : "success"
+         "fail" : "fail"
+      }
+      "eight" :
+      {
+         "message" : "The Dragon Algernon, unleashed by the curse, destroys your empire.  Smoldering with ash, soot, and blood, you resist."
+         "success" : "success"
+         "fail" : "fail"
+      }
+   ]
+   "end" : 
+   {
+      "message" : "You are Berserker.  Fame and fallow sway not your tides.  The earth trembles and sighs yet none stand before you."
+      "reward" : "identity_reward(\"berserker_talisman\")"
+   }    
+   "menu" :
+   {
+      "choices" : "d,b,t,r",
+      "text" : "\"\"\"Dry wind blows across the cold wastes.
+      D)iscover your might
+      B)uild your wealth
+      T)rade
+      R)est\"\"\""
+   }
+}
+

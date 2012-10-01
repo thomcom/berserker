@@ -2,10 +2,12 @@ from Player import Player
 from Battle import Battle
 from SaveGameProvider import SaveGameProvider
 from PlayerCreate import PlayerCreate
+from Data import Data
+from MainStory import MainStory
 
 class Game:
 
-   game_introduction = """Hello! Welcome to Dungeon Explore! Dungeon Explore is the awesomest text adventure roleplaying game you have ever played."""
+   game_introduction = "Hello! Welcome to " + Data.game_name + "! " + Data.game_name + " is the awesomest text adventure roleplaying game you have ever played.  You will not play the same game twice."""
 
    def Run(self):
       # Main game loop
@@ -20,6 +22,9 @@ class Game:
         
       # display player
       the_player.display()
+      
+      # now the player is created, we need to load a random-ish main storyline
+      the_story = MainStory(the_player)
 
       # now the player is created, we need to have an encounter with a monster
       # 1. create a random new monster type
