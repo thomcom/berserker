@@ -4,12 +4,20 @@ from SaveGameProvider import SaveGameProvider
 from PlayerCreate import PlayerCreate
 from Data import Data
 from MainStory import MainStory
+from ETio import Output
+from ETio import Input
+from MainStory import Menu
 
 class Game:
 
    game_introduction = "Hello! Welcome to " + Data.game_name + "! " + Data.game_name + " is the awesomest text adventure roleplaying game you have ever played.  You will not play the same game twice."""
 
+   def __init__(self):
+      self.default_menu = Menu(["i","a","q"],"i)nspect self a)bandon quest q)uit")
+
    def Run(self):
+      MainStory.LoadAllStories()
+      
       # Main game loop
       return self.run_game()
 
@@ -32,10 +40,12 @@ class Game:
       # 3. ask the player what they want to do: fight, spell, item, or run
       # 4. resolve battle - monster attacks player, player does whatever they selected
 
-      the_player = self.run_battles_till_death(the_player)
+      self.runStoryMain(the_story,the_player)
+
+#      the_player = self.run_battles_till_death(the_player)
       
-      print(the_player.get_name() + " was killed in the attack.")
-      print("Your hero selection was too weak to survive.  Try again.")
+      Output.Main(the_player.get_name() + " was killed in the action.")
+      Output.Main("Your hero selection was too weak to survive.  Try again.")
       return the_player
       
    def run_battles_till_death(self,the_player):
@@ -45,4 +55,30 @@ class Game:
             battle.execute()
       return the_player
          
+   def runStoryMain(self,the_story,the_player):
+      while( the_player.is_alive() ):
+         response = Input.GetKeyPressWithMenu( the_story.menu, self.default_menu )
+         if( response == 0 or response == 1 ):
+            battle = Battle.GetRandomBattle(the_player)
+            while(battle.is_active()):
+               battle.execute()
+            if( the_player.is_alive() ):
+               Output.Main("You conquer!")
+            else:
+               Output.Main("Sorry!")   
+               return the_player
+         elif( response == 2 ):
+            Output.Main("There are no stores in the wasteland.")
+         elif( response == 3 ):
+            Output.Main("You sleep fitfully (Hp + 1).")
+            the_player.healed(1)
+         elif( response == 4 ):
+            the_player.display()
+         elif( response == 5 ):
+            return the_player
+         elif( response == 6 ):
+            return the_player
+         else:
+            Output.Main("Invalid Selection")
          
+      

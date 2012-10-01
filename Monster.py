@@ -2,6 +2,7 @@ import Player
 from Player import Player
 from Data import Data
 import random
+from ETio import *
 
 class Monster(Player):
    monster_list = [
@@ -31,10 +32,10 @@ class Monster(Player):
    def get_xp_value(self):
       return self.xp_value
    def display(self):
-      print("Type: " + self.name)
-      print("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
-      print("MP:    " + str(self.max_mp-self.used_mp) + "/" + str(self.max_mp))
-      print("XP:    " + str(self.xp_value))
+      Output.Main("Type: " + self.name)
+      Output.Main("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
+      Output.Main("MP:    " + str(self.max_mp-self.used_mp) + "/" + str(self.max_mp))
+      Output.Main("XP:    " + str(self.xp_value))
    def reward(self,player):
-      print("=== You earn " + str(self.get_xp_value()) + "xp! ===")
+      Output.Main("=== You earn " + str(self.get_xp_value()) + "xp! ===")
       player.xp = player.xp + self.get_xp_value()

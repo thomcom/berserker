@@ -61,12 +61,8 @@
    },
    "menu" :
    {
-      "choices" : "d,b,t,r",
-      "text" : "\"\"\"Dry wind blows across the cold wastes.
-      D)iscover your might
-      B)uild your wealth
-      T)rade
-      R)est\"\"\""
+      "choices" : ["d","b","t","r"],
+      "text" : "Dry wind blows across the cold wastes.\nD)iscover your might\nB)uild your wealth\nT)rade\nR)est"
    }
 }
 }

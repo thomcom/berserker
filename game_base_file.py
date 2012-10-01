@@ -1,5 +1,3 @@
-import Player
-import Monster
 from Game import Game
 
 the_game = Game()

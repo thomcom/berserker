@@ -1,5 +1,6 @@
 import random
 from Data import Data
+from ETio import Output
 
 class Player:
   class_list = [
@@ -69,11 +70,11 @@ class Player:
            self.max_mp     = self.class_list[i][Data.mp_i]
            self.attack_die = self.class_list[i][Data.damage_i]
   def display(self):
-     print("Name:  " + self.name)
-     print("Class: " + self.class_type)
-     print("Level: " + str(self.level) + " Exp: " + str(self.xp))
-     print("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
-     print("MP:    " + str(self.max_mp-self.used_mp) + "/" + str(self.max_mp))
+     Output.Main("Name:  " + self.name)
+     Output.Main("Class: " + self.class_type)
+     Output.Main("Level: " + str(self.level) + " Exp: " + str(self.xp))
+     Output.Main("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
+     Output.Main("MP:    " + str(self.max_mp-self.used_mp) + "/" + str(self.max_mp))
   def damaged(self,amount):
      self.damage = self.damage + amount
   def healed(self,amount):
