@@ -56,16 +56,19 @@ class Game:
       return the_player
          
    def runStoryMain(self,the_story,the_player):
+      storynum = 0;
       while( the_player.is_alive() ):
          response = Input.GetKeyPressWithMenu( the_story.menu, self.default_menu )
          if( response == 0 or response == 1 ):
+            Output.Main(the_story.events[storynum].message)
+            storynum = storynum + 1
             battle = Battle.GetRandomBattle(the_player)
             while(battle.is_active()):
                battle.execute()
             if( the_player.is_alive() ):
-               Output.Main("You conquer!")
+               Output.Main( the_story.events[storynum].success )
             else:
-               Output.Main("Sorry!")   
+               Output.Main( the_story.events[storynum].fail )
                return the_player
          elif( response == 2 ):
             Output.Main("There are no stores in the wasteland.")
