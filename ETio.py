@@ -4,7 +4,9 @@ class Output:
    @classmethod
    def Main(cls,string):
       print(string)
-      
+   @classmethod
+   def Log(cls,string):
+      print(string)
 class Input:
    @classmethod
    def GetKeypress(cls):

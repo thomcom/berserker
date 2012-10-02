@@ -3,6 +3,7 @@ from Player import Player
 from Data import Data
 import random
 from ETio import *
+import math
 
 class Monster(Player):
    monster_list = [
@@ -39,3 +40,31 @@ class Monster(Player):
    def reward(self,player):
       Output.Main("=== You earn " + str(self.get_xp_value()) + "xp! ===")
       player.xp = player.xp + self.get_xp_value()
+
+class MonsterBuilder:
+   def __init__(self):
+      self.monster = Monster()
+   def setJson(self,json):
+      self.jsonSource = json
+   def build(self):
+      try:
+         json = self.jsonSource
+         monster = Monster()
+         monster.name = json['name']
+         monster.level = json['level']
+         monster.max_hp = math.pow(monster.level,2) + 4
+         monster.attack_die = math.pow(monster.level,2)/1.8 + 4
+         monster.xp_value = math.pow(monster.level,4) + 4
+         monster.battle = json['battle']
+         if 'loot' in json:
+            monster.loot = json['loot']
+         return monster
+      except Exception as err:
+         Output.Log("Tried to load bad Monster : " + str(self.jsonSource))
+         Output.Log(str(err))
+         raise
+         return 0
+      
+      
+      
+      

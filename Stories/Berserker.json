@@ -1,7 +1,7 @@
 { "mainstory" :
    {
    "name" : "berserker",
-   "events" :
+   "Events" :
    [
       {
          "message" : "You travel north into frozen fields.  3 arctic rats think you are more delicious than the tubers you were sent to harvest.",
@@ -54,17 +54,17 @@
          "fail" : "fail"
       }
    ],
-   "end" : 
+   "End" : 
    {
       "message" : "You are Berserker.  Fame and fallow sway not your tides.  The earth trembles and sighs yet none stand before you.",
       "reward" : "identity_reward(\"berserker_talisman\")"
    },
-   "menu" :
+   "Menu" :
    {
       "choices" : ["d","b","t","r"],
       "text" : "Dry wind blows across the cold wastes.\nD)iscover your might\nB)uild your wealth\nT)rade\nR)est"
    },
-   "monsters" :
+   "Monsters" :
    [
       {
          "name" : "Tundra Rat",
