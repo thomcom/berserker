@@ -63,7 +63,118 @@
    {
       "choices" : ["d","b","t","r"],
       "text" : "Dry wind blows across the cold wastes.\nD)iscover your might\nB)uild your wealth\nT)rade\nR)est"
-   }
+   },
+   "monsters" :
+   [
+      {
+         "name" : "Tundra Rat",
+         "level" : 1,
+         "type" : "melee",
+         "battle" :
+         {
+            "attack" : [ "bites!", "grabs with tiny claws!" ],
+            "delay" : [ "scampers around" ]
+         },
+         "loot" :
+         {
+            "item" : "rat pelt"
+         }
+      },
+      {
+         "name" : "Furry Wolverine",
+         "level" : 2,
+         "type" : "melee",
+         "battle" :
+         {
+            "attack" : [ "roars and lunges!", "tries to shake you in its mouth!" ]
+         }
+      },
+      {
+         "name" : "Barbarian Warrior",
+         "level" : 3,
+         "type" : "melee",
+         "battle" :
+         {
+            "attack" : [ "slashes at you with his axe!", "tries to clobber you!" ]
+         },
+         "loot" :
+         {
+            "item" : "obsidian axe",
+            "item" : "knife",
+            "gold" :
+            {
+               "minimum" : 50,
+               "random" : 100
+            }
+         }
+      },
+      {
+         "name" : "Assassin",
+         "level" : 4,
+         "type" : "melee",
+         "battle" :
+         {
+            "attack" : [ "tries to murder you!", "is about to murder the Chieftan!" ]
+         },
+         "loot" :
+         {
+            "item" : "assassin's blade",
+            "gold" :
+            {
+               "minimum" : 100,
+               "random" : 200
+            },
+            "item" : "healing potion",
+            "item" : "poison salve"
+         }
+      },
+      {
+         "name" : "Throk Chief of Wind",
+         "level" : 6,
+         "type" : "melee",
+         "battle" :
+         {
+            "attack" : [ "roars, \"Suffer, for you are the lesser man!\".", "swings a two-handed sword at you in a downward chop!", "slashes!" ],
+            "combat-item" :
+            {
+               "name" : "healing potion",
+               "conditions" :
+               {
+                  "hp<5once" : true,
+                  "random" : "5%"
+               }
+            }
+         },
+         "loot" :
+         {
+            "item" : "blade of throk",
+            "gold" :
+            {
+               "minimum" : 200,
+               "random" : 200
+            },
+            "item" : "healing potion"
+         }
+      },
+      {
+         "name" : "Groth Forest Chieftan",
+         "level" : 6,
+         "type" : "melee",
+         "battle" :
+         {
+            "attack" : [ "tries to unseat you from your growing empire.", "wields his axe with prowess.", "tries to headbutt!" ]
+         },
+         "loot" :
+         {
+            "item" : "ancient helmet",
+            "gold" :
+            {
+               "minimum" : 15,
+               "random" : 10
+            }
+         }
+      }
+   ]
 }
 }
 

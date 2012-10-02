@@ -41,18 +41,9 @@ class Game:
       # 4. resolve battle - monster attacks player, player does whatever they selected
 
       self.runStoryMain(the_story,the_player)
-
-#      the_player = self.run_battles_till_death(the_player)
       
       Output.Main(the_player.get_name() + " was killed in the action.")
       Output.Main("Your hero selection was too weak to survive.  Try again.")
-      return the_player
-      
-   def run_battles_till_death(self,the_player):
-      while( the_player.is_alive() ):
-         battle = Battle.GetRandomBattle(the_player)
-         while(battle.is_active()):
-            battle.execute()
       return the_player
          
    def runStoryMain(self,the_story,the_player):
@@ -61,7 +52,6 @@ class Game:
          response = Input.GetKeyPressWithMenu( the_story.menu, self.default_menu )
          if( response == 0 or response == 1 ):
             Output.Main(the_story.events[storynum].message)
-            storynum = storynum + 1
             battle = Battle.GetRandomBattle(the_player)
             while(battle.is_active()):
                battle.execute()
@@ -70,6 +60,7 @@ class Game:
             else:
                Output.Main( the_story.events[storynum].fail )
                return the_player
+            storynum = storynum + 1   
          elif( response == 2 ):
             Output.Main("There are no stores in the wasteland.")
          elif( response == 3 ):
