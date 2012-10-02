@@ -33,10 +33,14 @@ class Monster(Player):
    def get_xp_value(self):
       return self.xp_value
    def display(self):
-      Output.Main("Type: " + self.name)
-      Output.Main("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
-      Output.Main("MP:    " + str(self.max_mp-self.used_mp) + "/" + str(self.max_mp))
-      Output.Main("XP:    " + str(self.xp_value))
+      Output.Log("Type: " + self.name)
+      Output.Log("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
+      Output.Log("Attack: " + str(self.attack_die))
+      Output.Log("XP:    " + str(self.xp_value))
+      try:
+         Output.Log("Battle: " + str(self.battle))
+      try:
+         Output.Log("Loot: " + str(self.loot))
    def reward(self,player):
       Output.Main("=== You earn " + str(self.get_xp_value()) + "xp! ===")
       player.xp = player.xp + self.get_xp_value()
