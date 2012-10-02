@@ -69,7 +69,6 @@
       {
          "name" : "Tundra Rat",
          "level" : 1,
-         "type" : "melee",
          "battle" :
          {
             "attack" : [ "bites!", "grabs with tiny claws!" ],
@@ -83,7 +82,6 @@
       {
          "name" : "Furry Wolverine",
          "level" : 2,
-         "type" : "melee",
          "battle" :
          {
             "attack" : [ "roars and lunges!", "tries to shake you in its mouth!" ]
@@ -92,7 +90,6 @@
       {
          "name" : "Barbarian Warrior",
          "level" : 3,
-         "type" : "melee",
          "battle" :
          {
             "attack" : [ "slashes at you with his axe!", "tries to clobber you!" ]
@@ -111,7 +108,6 @@
       {
          "name" : "Assassin",
          "level" : 4,
-         "type" : "melee",
          "battle" :
          {
             "attack" : [ "tries to murder you!", "is about to murder the Chieftan!" ]
@@ -131,7 +127,6 @@
       {
          "name" : "Throk Chief of Wind",
          "level" : 6,
-         "type" : "melee",
          "battle" :
          {
             "attack" : [ "roars, \"Suffer, for you are the lesser man!\".", "swings a two-handed sword at you in a downward chop!", "slashes!" ],
@@ -159,7 +154,6 @@
       {
          "name" : "Groth Forest Chieftan",
          "level" : 6,
-         "type" : "melee",
          "battle" :
          {
             "attack" : [ "tries to unseat you from your growing empire.", "wields his axe with prowess.", "tries to headbutt!" ]
@@ -172,6 +166,132 @@
                "minimum" : 15,
                "random" : 10
             }
+         }
+      },
+      {
+         "name" : "Strange Chieftan",
+         "level" : 7,
+         "battle" :
+         {
+            "attack" : [ "wields razor sharp claws!", "intends to rule over all of the clans.  He attacks!" ]
+         },
+         "loot" :
+         {
+            "gold" :
+            {
+               "minimum" : 1500,
+               "random" : 1000
+            }
+         }
+      },
+      {
+         "name" : "Frost Giant",
+         "level" : 8,
+         "battle" :
+         {
+            "attack" : [ "nearly crushes you with a tree trunk!", "hurls a boulder" ],
+            "cast" : 
+            [
+               {
+                  "spellname" : "Thunder",
+                  "damage" : 
+                  {
+                     "minimum" : 25,
+                     "random" : 15
+                  }
+               }
+            ]
+         },
+         "loot" :
+         {
+            "item" :
+            {
+               "name" : "diamond",
+               "chance" : 50
+            },
+            "item" :
+            {
+               "name" : "ruby",
+               "chance" : 50
+            },
+            "item" :
+            {
+               "name" : "ingot",
+               "chance" : 30
+            }
+         }
+      },
+      {
+         "name" : "Spirit of the Curse",
+         "level" : 9,
+         "battle" :
+         {
+            "cast" :
+            [
+               {
+                  "spell-name" : "Cold",
+                  "frequency" : 20,
+                  "damage" :
+                  {
+                     "minimum" : 35,
+                     "random" : 15
+                  }
+               },
+               {
+                  "spell-name" : "Trembling",
+                  "frequency" : 30,
+                  "effect" : 
+                  {
+                     "name" : "stun",
+                     "duration" :
+                     {
+                        "minimum" : 1,
+                        "random" : 2
+                     }
+                  }
+               },
+               {
+                  "spell-name" : "Sadness",
+                  "effect" : 
+                  {
+                     "minimum" : 5,
+                     "random" : 15
+                  }
+               }
+            ]  
+         }
+      },
+      {
+         "name" : "Ancient Dragon Algernon",
+         "level" : 10,
+         "battle" :
+         {
+            "attack" :
+            {
+               "text" : [ "crushes you with claws!", "would rend your body in half with a single bite!" ],
+               "frequency" : 50
+            },
+            "cast" :
+            [
+               {
+                  "spell-name" : "Acid Breath",
+                  "frequency" : 20,
+                  "damage" :
+                  {
+                     "minimum" : 40,
+                     "random" : 100
+                  }
+               },
+               {
+                  "spell-name" : "Earthquake",
+                  "frequency" : 30,
+                  "effect" :
+                  {
+                     "minimum" : 30,
+                     "random" : 150
+                  }
+               }
+            ]  
          }
       }
    ]
