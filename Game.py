@@ -52,6 +52,7 @@ class Game:
          response = Input.GetKeyPressWithMenu( the_story.menu, self.default_menu )
          if( response == 0 or response == 1 ):
             Output.Main(the_story.events[storynum].message)
+            battleEnemies = the_story.events[storynum]['enemy']
             battle = Battle.GetRandomBattle(the_player)
             while(battle.is_active()):
                battle.execute()
@@ -64,7 +65,7 @@ class Game:
          elif( response == 2 ):
             Output.Main("There are no stores in the wasteland.")
          elif( response == 3 ):
-            Output.Main("You sleep fitfully (Hp + 1).")
+            Output.Main("You sleep fitfully (hp + 1).")
             the_player.healed(1)
          elif( response == 4 ):
             the_player.display()

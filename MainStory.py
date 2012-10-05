@@ -40,7 +40,6 @@ class MainStory:
             monsterBuilder = MonsterBuilder()
             monsterBuilder.setJson(monsterJson)
             self.monsters.append(monsterBuilder.build())
-            
    
    def loadStory(self,story_name):
       Output.Main(story_name)

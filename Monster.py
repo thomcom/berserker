@@ -37,10 +37,11 @@ class Monster(Player):
       Output.Log("HP:    " + str(self.max_hp-self.damage)  + "/" + str(self.max_hp))
       Output.Log("Attack: " + str(self.attack_die))
       Output.Log("XP:    " + str(self.xp_value))
-      try:
-         Output.Log("Battle: " + str(self.battle))
+      Output.Log("Battle: " + str(self.battle))
       try:
          Output.Log("Loot: " + str(self.loot))
+      except:
+         Output.Log("No loot")
    def reward(self,player):
       Output.Main("=== You earn " + str(self.get_xp_value()) + "xp! ===")
       player.xp = player.xp + self.get_xp_value()

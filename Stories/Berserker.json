@@ -1,37 +1,44 @@
 { "mainstory" :
    {
    "name" : "berserker",
+   "opening" : "Ancient tribal legend tells of the Berserker - Uniter of tribes and breaker of traditions.  Even as a child you have trusted that you are destined for greatness...",
    "Events" :
    [
       {
          "message" : "You travel north into frozen fields.  3 arctic rats think you are more delicious than the tubers you were sent to harvest.",
          "success" : "You bring 3 rat pelts and 60 pounds of tubers home to an ecstatic village.",
-         "fail" : "The rats chase you home.  You pray to Khul that tubers remain there after you've regrouped."
+         "fail" : "The rats chase you home.  You pray to Khul that tubers remain there after you've regrouped.",
+         "enemy" : ["Tundra Rat","Tundra Rat","Tundra Rat"]
       },
       {
          "message" : "Pleased with your work, the Chieftan orders you twice as far to harvest fallen nutritious pine cones.",
          "success" : "success",
-         "fail" : "fail"
+         "fail" : "fail",
+         "enemy" : ["Furry Wolverine","Furry Wolverine"]
       },
       {
          "message" : "Your village is attacked by a neighboring barbarian tribe!",
          "success" : "success",
-         "fail" : "fail"
+         "fail" : "fail",
+         "enemy" : ["Barbarian Warrior","Barbarian Warrior"]
       },
       {
          "message" : "The chieftan struggles to defend your wife from four murderers.",
          "success" : "You crush their bones!  You are now the chieftan, and a widower.",
-         "fail" : "fail"
+         "fail" : "fail",
+         "enemy" : ["Assassin","Assassin"]
       },
       {
          "message" : "You return to the camp of the bandits to repay their favor.",
          "success" : "You are now the chieftan of two tribes.  You have your choice of all the wives.",
-         "fail" : "fail"
+         "fail" : "fail",
+         "enemy" : ["Throk Chief of Wind"]
       },
       {
          "message" : "The chieftans of two neighboring tribes challenge you simultaneously.",
          "success" : "You are the emperor berserker.",
-         "fail" : "fail"
+         "fail" : "fail",
+         "enemy" : ["Groth Forest Chieftan","Strange Chieftan"]
       },
       {
          "message" : "Lording over villages loses its taste.",
@@ -41,17 +48,20 @@
       {
          "message" : "You make your way into the Western wastes, seeking adventure.  Frost giants think to challenge your imperial rule.",
          "success" : "success",
-         "fail" : "fail"
+         "fail" : "fail",
+         "enemy" : ["Frost Giant"]
       },
       {
          "message" : "On a mountaintop you speak the words that unleash a terrible curse.",
          "success" : "success",
-         "fail" : "fail"
+         "fail" : "fail",
+         "enemy" : ["Spirit of the Curse"]
       },
       {
          "message" : "The Dragon Algernon, unleashed by the curse, destroys your empire.  Smoldering with ash, soot, and blood, you resist.",
          "success" : "success",
-         "fail" : "fail"
+         "fail" : "fail",
+         "enemy" : ["Ancient Dragon Algernon"]
       }
    ],
    "End" : 
@@ -193,7 +203,7 @@
             "cast" : 
             [
                {
-                  "spellname" : "Thunder",
+                  "spell-text" : "laughs as lightning bolts arc out of the sky at you!",
                   "damage" : 
                   {
                      "minimum" : 25,
@@ -229,7 +239,7 @@
             "cast" :
             [
                {
-                  "spell-name" : "Cold",
+                  "spell-text" : "threatens to overwhelm you.",
                   "frequency" : 20,
                   "damage" :
                   {
@@ -238,7 +248,7 @@
                   }
                },
                {
-                  "spell-name" : "Trembling",
+                  "spell-text" : "binds you, leaving you powerless.",
                   "frequency" : 30,
                   "effect" : 
                   {
@@ -251,7 +261,7 @@
                   }
                },
                {
-                  "spell-name" : "Sadness",
+                  "spell-text" : "turns your efforts against you.",
                   "effect" : 
                   {
                      "minimum" : 5,
@@ -274,7 +284,7 @@
             "cast" :
             [
                {
-                  "spell-name" : "Acid Breath",
+                  "spell-name" : "vomits a heavy mist of sticky acid upon you and everywhere around you.",
                   "frequency" : 20,
                   "damage" :
                   {
@@ -283,7 +293,7 @@
                   }
                },
                {
-                  "spell-name" : "Earthquake",
+                  "spell-name" : "causes the earth to tremble!",
                   "frequency" : 30,
                   "effect" :
                   {

@@ -1,0 +1,77 @@
+DecisionEvent - an Event that requests input from the user
+-------------
+
+/************************************************************************
+ * GrindEv
+ * The alternate or side quest choice for each story.  Gain power without advancing.
+ * Custom text for each story, 1-3 choices.
+ ***********************************************************************/
+The icy wind blows but you are warmed with the vigor of the chase.
+D)escend into frozen caves
+P)urify your territory of vermin
+F)ight in the Arena
+
+
+/************************************************************************
+ * StandingEv
+ * The standings screen that allows a user to view their score relative to others.
+ ***********************************************************************/
+     Berserker! Standings
+------------------------------
+  name     rank   score
+  Frothnir           1   13058
+  Urlango            2   13057
+  War                3   13056
+  Buttocks           4   13055
+  Splash Masterson   5   13054
+  Torbeume           6   13053
+  Keigan             7   13052
+  Jorge              8   13051
+  Amesek             9   13050
+  Franzibald        10   13049
+T)op 10    M)y rank    C)lasses
+
+
+/************************************************************************
+ * LoadEv
+ * The loading screen
+ ***********************************************************************/
+Welcome to Berserker!  You have previously braved upon new adventure!
+1) Frothnir - Level 6 Berserker, 6311 XP
+2) Chambulance - Level 3 Fighter, 212 XP
+3) unused
+---------------------------------------------------
+S)elect one of your characters or C)reate a new one
+
+
+/************************************************************************
+ * SellItemEv
+ * The screen used for selling items from your inventory.
+ ***********************************************************************/
+Sell items
+Axe            12g    > Tunic        8g
+Sword           8g      Headband     6g
+Knife           2g      Knee pads   15g
+Potato          2g      Rat pelt     3g
+Cheeseburger    3g      Rat pelt     3g
+---------------------------------------------------
+Select an item to sell...
+Are you sure you want to sell Tunic for 8g? (y/n) y
+Tunic sold! (g = g + 8)
+
+
+ShopEv
+PlayerInfoEv
+PlayerMakeEv
+BattleEv
+AchievementEv
+
+
+
+OutputEvent - an Event that is only a status update
+
+BuyItemEv
+QuitEv
+RewardEv
+StoryEv
+SideQuestEv
