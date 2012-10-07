@@ -1,0 +1,104 @@
+{
+   "items" :
+   [
+      {
+         "name" : "apple",
+         "text" : "Your apple hits the spot.",
+         "value" : 1,
+         "usability" : ["battle","rest"],
+         "effect" : 
+         [
+            {
+               "type" : "heal",
+               "amount" : "1d4"
+            }
+         ]
+      },
+      {
+         "name" : "loaf of bread",
+         "text" : "Bread is filling and satisfying.",
+         "value" : 2,
+         "usability" : ["battle","rest"],
+         "effect" :
+         [
+            {
+               "type" : "heal",
+               "amount" : "2d4"
+            }
+         ]
+      },
+      {
+         "name" : "pony key of cider",
+         "text" : "This spiced beverage is very refreshing!",
+         "value" : 10,
+         "usability" : ["rest"],
+         "effect" :
+         [
+            {
+               "type" : "heal",
+               "amount" : "2d10"
+            }
+         ]
+      },
+      {
+         "name" : "pony keg of ale",
+         "text" : "Rapid consumption of four pints of ale brings you considerable fortune.",
+         "value" : 25,
+         "usability" : ["rest"],
+         "effect" :
+         [
+            {
+               "type" : "heal",
+               "amount" : "4d10"
+            },
+            {
+               "type" : "mp-restore",
+               "amount" : "4d10"
+            }
+         ]
+      },
+      {
+         "name" : "potion of healing",
+         "text" : "Chalky and sour, nobody drinks a potion of healing until they have to.",
+         "value" : 100,
+         "usability" : ["battle","rest"],
+         "effect" :
+         [
+            {
+               "type" : "heal",
+               "amount" : "4d10"
+            }
+         ]
+      },
+      {
+         "name" : "elixir",
+         "text" : "You drink elixir!\nIt isn't natural.",
+         "value" : 2500,
+         "usability" : ["battle","rest"],
+         "effect" :
+         [
+            {
+               "type" : "heal",
+               "amount" : "all"
+            },
+            {
+               "type" : "mp-restore",
+               "amount" : "all"
+            }
+         ]
+      },         
+      {
+         "name" : "vial of acid",
+         "text_S" : "You hurl a the acid vial at %s!",
+         "value" : 10,
+         "usability" : ["battle"],
+         "effect" :
+         [
+            {
+               "type" : "attack",
+               "amount" : "4d4"
+            }
+         ]
+      }
+   ]
+}
