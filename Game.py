@@ -52,7 +52,8 @@ class Game:
          response = Input.GetKeyPressWithMenu( the_story.menu, self.default_menu )
          if( response == 0 or response == 1 ):
             Output.Main(the_story.events[storynum].message)
-            battleEnemies = the_story.events[storynum]['enemy']
+            #TODO: load enemies according to the story event
+            #battleEnemies = the_story.events[storynum]['enemy']
             battle = Battle.GetRandomBattle(the_player)
             while(battle.is_active()):
                battle.execute()

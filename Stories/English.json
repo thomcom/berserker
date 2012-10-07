@@ -1,0 +1,79 @@
+{
+   "game-name" : "Berserker",
+   "any-key" : "Press any key to continue...",
+   "none" : "none",
+   "basics" : {
+      "name" : "Name",
+      "class" : "Class",
+      "level" : "Level",
+      "xp" : "XP",
+      "hp" : "HP",
+      "hit-points" : "Hit points",
+      "mp" : "MP",
+      "magic-points" : "Magic points",
+      "weapon" : "Weapon",
+      "armor" : "Armor",
+      "item" : "Item"
+   },
+   "global-menu" : {
+      "select" : "I)nspect self Q)uit A)bandon your quest",
+      "opts" : ["i","q","a"],
+      "abandon-warning" : "If you abandon your quest this character will be deleted and added to the standings board.  This is not reversible.  Are you sure?"
+   },
+   "WelcomeEv" : {
+      "welcome" : "Welcome to %s!  You have previously braved upon adventure!",
+      "select" : "S)elect, C)reate, or D)elete a character",
+      "opts" : ["s","c","d"],
+      "delete-warning" : "Deleting your character is not reversible!  Are you sure?",
+      "too-many-to-create" : "You have enough characters.  Finish the game with one or delete it!"
+   },
+   "StandingsEv" : {
+      "title" : "%s Standings",
+      "select" : "T)op 10    M)y rank    C)lasses",
+      "opts" : ["t","m","c"]
+   },
+   "ShopEv" : {
+      "title" : "Welcome to %s's store!  What would you like to buy?",
+      "select" : "W)eapon, A)rmor, or I)tem: ",
+      "opts" : ["w","a","i"]
+   },
+   "SellItemEv" : {
+      "title" : "Lighten Your Load",
+      "select" : "Select an item to sell (n): ",
+      "confirm" : "Are you sure you want to sell %s for %dg?",
+      "done" : "%s sold!"
+   },
+   "RewardEv" : {
+      "title" : "You received:"
+   },
+   "QuitEv" : {
+      "title" : "%s is shutting down.  Thanks for playing and come back soon!"
+   },
+   "PlayerMakeEv" : {
+      "enter-name" : "Enter your name: ",
+      "choose-class" : "Choose your class: "
+   },
+   "PlayerInfoEv" : {
+      "select" : "D)one",
+      "inventory" : "C)haracter inventory",
+      "achievements" : "P)layer achievements",
+      "standings" : "S)tandings",      
+      "opts" : ["d","c","p","s"]
+   },
+   "DecideEv" : {
+      "title" : "You must decide."
+   },
+   "BuyItemEv" : {
+      "title" : "You bought %s!",
+      "eqiup-reminder" : "Don't forget to equip it!",
+      "use-reminder" : "You can use it in battle for an edge.",
+      "non-combat" : "This item can only be used outside of combat."
+   },
+   "AchievementsEv" : {
+      "title" : "You are a well seasoned berserker!",
+      "subtitle" : "Achievements received: ",
+      "total" : "%d/%d achievements unlocked!",
+      "select" : "D)one",
+      "opts" : ["d"]
+   }
+}
