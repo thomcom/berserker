@@ -1,0 +1,29 @@
+/*******
+ * View
+ *******/
+displays templates
+displays cursor
+catch keyevents
+
+/*************
+ * Controller
+ *************/
+populates templates
+sends templates to View
+gets template coords from View
+populate events stack
+generates new events
+receives input from view
+
+/********
+ * Model
+ ********/
+classes
+save data
+events
+monsters
+items
+side quests
+player data
+acheivements
+

@@ -1,4 +1,5 @@
 from Game import Game
 
 the_game = Game()
-the_game.Run()
+the_game.Launch()
+
