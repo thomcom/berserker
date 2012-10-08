@@ -1,6 +1,6 @@
 import random
 from Data import Data
-from ETio import Output
+from advview.ETio import Output
 
 class Player:
   class_list = [

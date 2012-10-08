@@ -1,12 +1,10 @@
-from Player import Player
-from Battle import Battle
-from SaveGameProvider import SaveGameProvider
-from PlayerCreate import PlayerCreate
-from Data import Data
-from MainStory import MainStory
-from ETio import Output
-from ETio import Input
-from MainStory import Menu
+from advmodel import Player
+from advcontroller.Battle import *
+from advmodel import SaveGameProvider
+from advmodel import PlayerCreate
+from advmodel.Data import Data
+from advview.ETio import *
+from advmodel.MainStory import *
 
 class Game:
 
@@ -22,9 +20,9 @@ class Game:
       return self.run_game()
 
    def run_game(self):
-      saveGames = SaveGameProvider()
+      saveGames = SaveGameProvider.SaveGameProvider()
       if( saveGames.getSaveCount() == 0 ):
-         the_player = PlayerCreate.CreateFirst()
+         the_player = PlayerCreate.PlayerCreate.CreateFirst()
       else:
          the_player = GameLoader.LoadGameDialog()         
         

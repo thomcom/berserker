@@ -1,7 +1,7 @@
-from Player import Player
-from Monster import Monster
+from advmodel import Player
+from advmodel.Monster import *
 import random
-from ETio import *
+from advview.ETio import *
 
 class Battle:
    @classmethod

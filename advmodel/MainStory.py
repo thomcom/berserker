@@ -6,7 +6,7 @@ from Event import Event
 from Player import Player
 from Monster import Monster
 from Monster import MonsterBuilder
-from ETio import Output
+from advview import ETio
 
 class Menu:
    def __init__(self,choices,text):

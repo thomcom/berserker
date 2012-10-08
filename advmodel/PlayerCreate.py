@@ -1,6 +1,7 @@
 from Player import Player
 from Data import Data
-from ETio import * # Input and Output
+from advview.ETio import Output
+from advview.ETio import Input
 
 class PlayerCreate:
    create_first_message = "This if your first time playing " + Data.game_name + """.
