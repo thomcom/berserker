@@ -12,4 +12,6 @@ class Model:
       Log(Log.STATUS,"Preloading sidequests")
    def preloadItems(self):
       Log(Log.STATUS,"Preloading items")
+   def preloadStories(self):
+      Log(Log.STATUS,"Preloading stories")
 

@@ -23,7 +23,8 @@ class MainStory:
    
    @classmethod
    def LoadAllStories(cls):
-      berserker_file = io.open("./Stories/Berserker.json")
+      # TODO: Use AdvDataRetrieve
+      berserker_file = io.open("./advmodel/json/StoryDefault.json")
       parsedJson = json.loads(berserker_file.read())
       cls.all_stories = [parsedJson]
          

@@ -8,6 +8,7 @@ import io
 # loads local file game data
 class AdvFileDataRetrieve:
    def __init__(self):
+      print(__file__)
       self.defaultsPath = "./json/English.json"
       self.itemPath = "./json/Items.json"
       self.weaponPath = "./json/Weapons.json"
