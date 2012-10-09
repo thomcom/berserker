@@ -7,10 +7,11 @@ from advview import View
 class Game:
    def Launch(self):
       m = Model()
+      m.preloadItems()
       m.preloadClasses()
       m.preloadMonsters()
       m.preloadSideQuests()
-      m.preloadItems
+      m.preloadStories()
 
       v = View()
       v.initialize(Types.OSX)
