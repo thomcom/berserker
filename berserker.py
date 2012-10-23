@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from Game import Game
 import advcontroller
 

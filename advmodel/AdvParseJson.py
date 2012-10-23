@@ -3,9 +3,13 @@
 #
 ##########################################################
 
-class AdvJsonParser:
+class AdvParseJson:
    def __init__(self): pass
+   def addDefaultsToModel(defaultsJson,model):
+      pass
    def addItemJsonToModel(itemJson,model):
+      pass
+   def addWeaponJsonToModel(weaponJson,model):
       pass
    def addClassJsonToModel(classJson,model):
       pass

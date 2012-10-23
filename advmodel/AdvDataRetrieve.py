@@ -5,8 +5,10 @@
 import json
 import io
 
+from advview import Log
+
 # loads local file game data
-class AdvFileDataRetrieve:
+class AdvFileJsonDataRetrieve:
    def __init__(self):
       print(__file__)
       self.defaultsPath = "./json/English.json"
@@ -24,32 +26,32 @@ class AdvFileDataRetrieve:
          classJson = json.loads(classFile.read())
          return classJson
       except TypeError, err:
-         Output.Log(str(err))
+         Log(Log.FILEERROR,str(err))
       except Exception, err:
-         Output.Log("Error getting json " + str(err))
-   def getdefaultsJson(self):
+         Log(Log.DATAERROR,"Error getting json " + str(err))
+   def GetDefaults(self):
       return self.__getJson(self.modelDefaultsPath)
-   def getItemJson(self):
+   def GetItems(self):
       return self.__getJson(self.itemPath)
-   def getWeaponJson(self):
+   def GetWeapons(self):
       return self.__getJson(self.weaponPath)
-   def getClassJson(self):
+   def GetClasses(self):
       return self.__getJson(self.classPath)
-   def getMonsterJson(self):
+   def GetMonsters(self):
       return self.__getJson(self.monsterPath)
-   def getSideQuestJson(self):
+   def GetSideQuests(self):
       return self.__getJson(self.sideQuestPath)
-   def getStoryJson(self):
+   def GetStories(self):
       return self.__getJson(self.storyJson)
 
 # Will eventually asynchronously retrieve data from http server
-class AdvHttpDataRetrieve:
+class AdvHttpJsonDataRetrieve:
    def __init__(self): pass
-   def getdefaultsJson(self): pass
-   def getItemJson(self): pass
-   def getWeaponJson(self): pass
-   def getClassJson(self): pass
-   def getMonsterJson(self): pass 
-   def getSideQuestJson(self): pass
-   def getStoryJson(self): pass
+   def GetDefaults(self): pass
+   def GetItem(self): pass
+   def GetWeapon(self): pass
+   def GetClass(self): pass
+   def GetMonster(self): pass 
+   def GetSideQuest(self): pass
+   def GetStory(self): pass
 

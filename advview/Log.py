@@ -2,6 +2,8 @@
 
 class Log:
    STATUS = "Log.STATUS"
+   DATAERROR = "Log.DATAERROR"
+   FILERROR = "Log.FILEERROR"
    
    status_filename = "advstatus.log"
    def __init__(self,log_type,string):

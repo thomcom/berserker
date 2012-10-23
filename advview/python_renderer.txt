@@ -1,0 +1,8 @@
+Renderer:
+
+Initialize:
+Window Size
+Position
+
+Load Template:
+id, template ascii, valid cursor coordinates, valid character inputs
