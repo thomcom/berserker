@@ -371,7 +371,7 @@
          "object-type" : "armor",
          "name" : "ancient helmet",
          "description" : "A stunning helmet fashioned from techniques completely lost on your barbaric people.",
-         "defense" : "1d10+10",
+         "armor" : "1d10+10",
          "value" : 700
       }
    ]
