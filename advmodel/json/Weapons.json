@@ -1,64 +1,72 @@
-{
-   "weapons" : [
-      {
-         "name" : "Wood sword",
-         "description" : "This sturdy, heavy bludgeon includes a guard for sparring and practice.",
-         "damage" : "1d4",
-         "value" : 1
-      },
-      {
-         "name" : "Staff",
-         "description" : "A six foot staff is a valuable tool for any traveller.",
-         "damage" : "1d4",
-         "value" : 1
-      },
-      {
-         "name" : "Knife",
-         "description" : "A simple iron blade for slicing and piercing.",
-         "damage" : "1d4",
-         "value" : 2
-      },
-      {
-         "name" : "Spear",
-         "description" : "A spear is an effective weapon because it increase the reach of its wielder",
-         "damage" : "1d6",
-         "value" : 4
-      },
-      {
-         "name" : "Hatchet",
-         "description" : "A hatchet packs a heavy punch in a small portable package.",
-         "damage" : "1d6",
-         "value" : 5
-      },
-      {
-         "name" : "Tree axe",
-         "description" : "A tree axe is an unwieldy weapon, but strikes with sufficient force and consistency to fell a tree.  No sword can compete with that.",
-         "damage" : "1d8",
-         "value" : 8
-      },
-      {
-         "name" : "Steel short sword",
-         "description" : "This sword is a real weapon, a soldier's blade that can keep any improvised weapon at bay.",
-         "damage" : "1d8",
-         "value" : 15
-      },
-      {
-         "name" : "Steel bastard sword",
-         "description" : "A long blade suitable for use one or two handed.  Immensely lethal in the hands of a trained wielder.",
-         "damage" : "2d6",
-         "value" : 40
-      },
-      {
-         "name" : "Ancient sword",
-         "description" : "This sword was produced with techniques that are now lost.  It seems to leap from your hand into battle.",
-         "damage" : "2d10",
-         "value" : 500
-      },
-      {
-         "name" : "Mystic sword",
-         "description" : "A weapon that appears at times most suited to it and wielded by only those of legendary fame.",
-         "damage" : "4d10",
-         "value" : 5000
-      }
-   ]
-}
+[
+   {
+      "object-type" : "weapon",
+      "name" : "wood sword",
+      "description" : "This sturdy, heavy bludgeon includes a guard for sparring and practice.",
+      "damage" : "1d4",
+      "value" : 1
+   },
+   {
+      "object-type" : "weapon",
+      "name" : "staff",
+      "description" : "A six foot staff is a valuable tool for any traveller.",
+      "damage" : "1d4",
+      "value" : 1
+   },
+   {
+      "object-type" : "weapon",
+      "name" : "knife",
+      "description" : "A simple iron blade for slicing and piercing.",
+      "damage" : "1d4",
+      "value" : 2
+   },
+   {
+      "object-type" : "weapon",
+      "name" : "spear",
+      "description" : "A spear is an effective weapon because it increase the reach of its wielder",
+      "damage" : "1d6",
+      "value" : 4
+   },
+   {
+      "object-type" : "weapon",
+      "name" : "hatchet",
+      "description" : "A hatchet packs a heavy punch in a small portable package.",
+      "damage" : "1d6",
+      "value" : 5
+   },
+   {
+      "object-type" : "weapon",
+      "name" : "tree axe",
+      "description" : "A tree axe is an unwieldy weapon, but strikes with sufficient force and consistency to fell a tree.  No sword can compete with that.",
+      "damage" : "1d8",
+      "value" : 8
+   },
+   {
+      "object-type" : "weapon",
+      "name" : "steel short sword",
+      "description" : "This sword is a real weapon, a soldier's blade that can keep any improvised weapon at bay.",
+      "damage" : "1d8",
+      "value" : 15
+   },
+   {
+      "object-type" : "weapon",
+      "name" : "steel bastard sword",
+      "description" : "A long blade suitable for use one or two handed.  Immensely lethal in the hands of a trained wielder.",
+      "damage" : "2d6",
+      "value" : 40
+   },
+   {
+      "object-type" : "weapon",
+      "name" : "ancient sword",
+      "description" : "This sword was produced with techniques that are now lost.  It seems to leap from your hand into battle.",
+      "damage" : "2d10",
+      "value" : 500
+   },
+   {
+      "object-type" : "weapon",
+      "name" : "mystic sword",
+      "description" : "A weapon that appears at times most suited to it and wielded by only those of legendary fame.",
+      "damage" : "4d10",
+      "value" : 5000
+   }
+]
