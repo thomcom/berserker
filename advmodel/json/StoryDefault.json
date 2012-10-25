@@ -1,82 +1,85 @@
-{ "mainstory" :
+[
    {
-   "name" : "berserker",
-   "opening" : "Ancient tribal legend tells of the Berserker - Uniter of tribes and breaker of traditions.  Even as a child you have trusted that you are destined for greatness...",
-   "Events" :
-   [
+      "object-type" : "mainstory",      
+      "name" : "Call of The Berserker",
+      "opening" : "Ancient tribal legend tells of the Berserker - Uniter of tribes and breaker of traditions.  Even as a child you have trusted that you are destined for greatness...",
+      "Events" :
+      [
+         {
+            "message" : "You travel north into frozen fields.  3 arctic rats think you are more delicious than the tubers you were sent to harvest.",
+            "success" : "You bring 3 rat pelts and 60 pounds of tubers home to an ecstatic village.",
+            "fail" : "The rats chase you home.  You pray to Khul that tubers remain there after you've regrouped.",
+            "enemy" : ["Tundra Rat","Tundra Rat","Tundra Rat"]
+         },
+         {
+            "message" : "Pleased with your work, the Chieftan orders you twice as far to harvest fallen nutritious pine cones.",
+            "success" : "success",
+            "fail" : "fail",
+            "enemy" : ["Furry Wolverine","Furry Wolverine"]
+         },
+         {
+            "message" : "Your village is attacked by a neighboring barbarian tribe!",
+            "success" : "success",
+            "fail" : "fail",
+            "enemy" : ["Barbarian Warrior","Barbarian Warrior"]
+         },
+         {
+            "message" : "The chieftan struggles to defend your wife from four murderers.",
+            "success" : "You crush their bones!  You are now the chieftan, and a widower.",
+            "fail" : "fail",
+            "enemy" : ["Assassin","Assassin"]
+         },
+         {
+            "message" : "You return to the camp of the bandits to repay their favor.",
+            "success" : "You are now the chieftan of two tribes.  You have your choice of all the wives.",
+            "fail" : "fail",
+            "enemy" : ["Throk Chief of Wind"]
+         },
+         {
+            "message" : "The chieftans of two neighboring tribes challenge you simultaneously.",
+            "success" : "You are the emperor berserker.",
+            "fail" : "fail",
+            "enemy" : ["Groth Forest Chieftan","Strange Chieftan"]
+         },
+         {
+            "message" : "Lording over villages loses its taste.",
+            "success" : "success",
+            "fail" : "fail"
+         },
+         {
+            "message" : "You make your way into the Western wastes, seeking adventure.  Frost giants think to challenge your imperial rule.",
+            "success" : "success",
+            "fail" : "fail",
+            "enemy" : ["Frost Giant"]
+         },
+         {
+            "message" : "On a mountaintop you speak the words that unleash a terrible curse.",
+            "success" : "success",
+            "fail" : "fail",
+            "enemy" : ["Spirit of the Curse"]
+         },
+         {
+            "message" : "The Dragon Algernon, unleashed by the curse, destroys your empire.  Smoldering with ash, soot, and blood, you resist.",
+            "success" : "success",
+            "fail" : "fail",
+            "enemy" : ["Ancient Dragon Algernon"]
+         }
+      ],
+      "End" : 
       {
-         "message" : "You travel north into frozen fields.  3 arctic rats think you are more delicious than the tubers you were sent to harvest.",
-         "success" : "You bring 3 rat pelts and 60 pounds of tubers home to an ecstatic village.",
-         "fail" : "The rats chase you home.  You pray to Khul that tubers remain there after you've regrouped.",
-         "enemy" : ["Tundra Rat","Tundra Rat","Tundra Rat"]
+         "message" : "You are Berserker.  Fame and fallow sway not your tides.  The earth trembles and sighs yet none stand before you.",
+         "reward" : "identity_reward(\"berserker_talisman\")"
       },
+      "Menu" :
       {
-         "message" : "Pleased with your work, the Chieftan orders you twice as far to harvest fallen nutritious pine cones.",
-         "success" : "success",
-         "fail" : "fail",
-         "enemy" : ["Furry Wolverine","Furry Wolverine"]
-      },
-      {
-         "message" : "Your village is attacked by a neighboring barbarian tribe!",
-         "success" : "success",
-         "fail" : "fail",
-         "enemy" : ["Barbarian Warrior","Barbarian Warrior"]
-      },
-      {
-         "message" : "The chieftan struggles to defend your wife from four murderers.",
-         "success" : "You crush their bones!  You are now the chieftan, and a widower.",
-         "fail" : "fail",
-         "enemy" : ["Assassin","Assassin"]
-      },
-      {
-         "message" : "You return to the camp of the bandits to repay their favor.",
-         "success" : "You are now the chieftan of two tribes.  You have your choice of all the wives.",
-         "fail" : "fail",
-         "enemy" : ["Throk Chief of Wind"]
-      },
-      {
-         "message" : "The chieftans of two neighboring tribes challenge you simultaneously.",
-         "success" : "You are the emperor berserker.",
-         "fail" : "fail",
-         "enemy" : ["Groth Forest Chieftan","Strange Chieftan"]
-      },
-      {
-         "message" : "Lording over villages loses its taste.",
-         "success" : "success",
-         "fail" : "fail"
-      },
-      {
-         "message" : "You make your way into the Western wastes, seeking adventure.  Frost giants think to challenge your imperial rule.",
-         "success" : "success",
-         "fail" : "fail",
-         "enemy" : ["Frost Giant"]
-      },
-      {
-         "message" : "On a mountaintop you speak the words that unleash a terrible curse.",
-         "success" : "success",
-         "fail" : "fail",
-         "enemy" : ["Spirit of the Curse"]
-      },
-      {
-         "message" : "The Dragon Algernon, unleashed by the curse, destroys your empire.  Smoldering with ash, soot, and blood, you resist.",
-         "success" : "success",
-         "fail" : "fail",
-         "enemy" : ["Ancient Dragon Algernon"]
+         "choices" : ["d","b","t","r"],
+         "text" : "Dry wind blows across the cold wastes.\nD)iscover your might\nB)uild your wealth\nT)rade\nR)est"
       }
-   ],
-   "End" : 
-   {
-      "message" : "You are Berserker.  Fame and fallow sway not your tides.  The earth trembles and sighs yet none stand before you.",
-      "reward" : "identity_reward(\"berserker_talisman\")"
    },
-   "Menu" :
-   {
-      "choices" : ["d","b","t","r"],
-      "text" : "Dry wind blows across the cold wastes.\nD)iscover your might\nB)uild your wealth\nT)rade\nR)est"
-   },
-   "Monsters" :
+   "monsters",
    [
       {
+         "object-type" : "monster",
          "name" : "Tundra Rat",
          "level" : 1,
          "battle" :
@@ -90,6 +93,7 @@
          }
       },
       {
+         "object-type" : "monster",
          "name" : "Furry Wolverine",
          "level" : 2,
          "battle" :
@@ -98,6 +102,7 @@
          }
       },
       {
+         "object-type" : "monster",
          "name" : "Barbarian Warrior",
          "level" : 3,
          "battle" :
@@ -116,6 +121,7 @@
          }
       },
       {
+         "object-type" : "monster",
          "name" : "Assassin",
          "level" : 4,
          "battle" :
@@ -135,6 +141,7 @@
          }
       },
       {
+         "object-type" : "monster",
          "name" : "Throk Chief of Wind",
          "level" : 6,
          "battle" :
@@ -152,7 +159,7 @@
          },
          "loot" :
          {
-            "item" : "blade of throk",
+            "item" : "Blade of Throk",
             "gold" :
             {
                "minimum" : 200,
@@ -162,6 +169,7 @@
          }
       },
       {
+         "object-type" : "monster",
          "name" : "Groth Forest Chieftan",
          "level" : 6,
          "battle" :
@@ -179,6 +187,7 @@
          }
       },
       {
+         "object-type" : "monster",
          "name" : "Strange Chieftan",
          "level" : 7,
          "battle" :
@@ -195,6 +204,7 @@
          }
       },
       {
+         "object-type" : "monster",
          "name" : "Frost Giant",
          "level" : 8,
          "battle" :
@@ -232,6 +242,7 @@
          }
       },
       {
+         "object-type" : "monster",
          "name" : "Spirit of the Curse",
          "level" : 9,
          "battle" :
@@ -272,6 +283,7 @@
          }
       },
       {
+         "object-type" : "monster",
          "name" : "Ancient Dragon Algernon",
          "level" : 10,
          "battle" :
@@ -304,7 +316,63 @@
             ]  
          }
       }
+   ],
+   "items",
+   [
+      {
+         "object-type" : "item",
+         "name" : "rat pelt",
+         "text" : "If this pelt weren't frozen it would be smelly and surrounded by buzzing flies.",
+         "value" : 15
+      },
+      {
+         "object-type" : "weapon",
+         "name" : "obsidian axe",
+         "description" : "The favored weapon of many northern tribes.",
+         "damage" : "1d8",
+         "value" : 7
+      },
+      {
+         "object-type" : "weapon",
+         "name" : "knife",
+         "description" : "A simple, rudimentary knife.",
+         "damage" : "1d4",
+         "value" : 3
+      },
+      {
+         "object-type" : "weapon",
+         "name" : "assassin's blade",
+         "description" : "Precise blacksmithing wrought this sharp and balanced blade.",
+         "damage" : "1d10",
+         "value" : 65
+      },
+      {
+         "object-type" : "item",      
+         "name" : "poison salve",
+         "text" : "Guaranteed firepower maximization, ethics not required.  Your next attack will do 3x damage.",
+         "value" : 100,
+         "usability" : ["rest"],
+         "effect" :
+         [
+            {
+               "type" : "damage-multiplier",
+               "amount" : "3"
+            }
+         ]
+      },
+      {
+         "object-type" : "weapon",
+         "name" : "Blade of Throk",
+         "description" : "A massive chieftan's sword.",
+         "damage" : "1d10+6",
+         "value" : 250
+      },
+      {
+         "object-type" : "armor",
+         "name" : "ancient helmet",
+         "description" : "A stunning helmet fashioned from techniques completely lost on your barbaric people.",
+         "defense" : "1d10+10",
+         "value" : 700
+      }
    ]
-}
-}
-
+]
