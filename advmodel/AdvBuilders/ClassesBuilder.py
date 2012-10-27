@@ -1,6 +1,7 @@
 # ClassesBuilder creates a list of Class objects and returns them
+from advmodel.AdvBuilders import AbstractBuilder
 
-class ClassesBuilder:
+class ClassesBuilder(AbstractBuilder):
    def __init__(self):
       pass
    def SetJson(self,json):

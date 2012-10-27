@@ -8,8 +8,13 @@ class Item:
       self.usability = None
       self.salable = True
    def __str__(self):
-      print("Item---")
-      print("Name: " + self.name)
-      print("Value: " + self.value)
-      print("Usability: " + self.usability)
-      print("Salable: " + self.salable)
+      return """
+         Name: %s
+         Value: %d
+         Usability: %s
+         Salable: %s """ % (self.name,self.value,self.usability,self.salable)
+   def __repr__(self):
+      return self.__str__()
+      
+
+      

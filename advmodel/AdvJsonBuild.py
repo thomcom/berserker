@@ -2,11 +2,15 @@
 # by the custom json data.
 
 import json
+from advview import Log
+from AdvBuilders import *
 
 class JsonBuildTypes:
    TYPE = "object-type"
    
    # object types supported by AdvJsonBuild
+   ARMOR = "armor"
+   ARMORS = "armors"
    CLASS = "class"
    CLASSES = "classes"
    ITEM = "item"   
@@ -18,35 +22,58 @@ class JsonBuildTypes:
    SIDEQUESTS = "sidequests"
    STORY = "story"
    STORIES = "stories"
+   WEAPON = "weapon"
+   WEAPONS = "weapons"
 
 class AdvJsonBuild:
    def __init__(self):
       pass
-   def Build(self,jsonDict):
-      # jsonDict better be a dictionary, and contain a self identifying type key
+   def __getBuilder(self,type):
       try:
-         self.currentType = jsonDict[JsonBuildTypes.TYPE]
-      except keyError:
-         Log(Log.DATAERROR,"AdvJsonBuild unable to parse json object: " + jsonDict + " for " + JsonBuildTypes.TYPE)
-      except TypeError:
-         Log(Log.DATAERROR,"AdvJsonBuild unable to parse object: " + jsonDict + " not a dictionary.")
-         
-      # identify type of json data
-      # with large conditional block
-      builder = {
-         JsonBuildTypes.CLASS: ClassBuilder()
-         JsonBuildTypes.CLASSES: ClassesBuilder()
-         JsonBuildTypes.ITEM: ItemBuilder()
-         JsonBuildTypes.ITEMS: ItemsBuilder()
-         JsonBuildTypes.MONSTER: MonsterBuilder()
-         JsonBuildTypes.MONSTERS: MonstersBuilder()
-         JsonBuildTypes.SETTINGS: SettingsBuilder()
-         JsonBuildTypes.SIDEQUEST: SideQuestBuilder()
-         JsonBuildTypes.SIDEQUESTS: SideQuestsBuilder()
-         JsonBuildTypes.STORIES: StoriesBuilder()
-         JsonBuildTypes.STORY: StoryBuilder()
-      }         
+         result = {
+            JsonBuildTypes.ARMOR: ArmorBuilder(),
+            JsonBuildTypes.ARMORS: ArmorsBuilder(),
+            JsonBuildTypes.CLASS: ClassBuilder(),
+            JsonBuildTypes.CLASSES: ClassesBuilder(),
+            JsonBuildTypes.ITEM: ItemBuilder(),
+            JsonBuildTypes.ITEMS: ItemsBuilder(),
+            JsonBuildTypes.MONSTER: MonsterBuilder(),
+            JsonBuildTypes.MONSTERS: MonstersBuilder(),
+            JsonBuildTypes.SETTINGS: SettingsBuilder(),
+            JsonBuildTypes.SIDEQUEST: SideQuestBuilder(),
+            JsonBuildTypes.SIDEQUESTS: SideQuestsBuilder(),         
+            JsonBuildTypes.STORY: StoryBuilder(),
+            JsonBuildTypes.STORIES: StoriesBuilder(),
+            JsonBuildTypes.WEAPON: WeaponBuilder(),
+            JsonBuildTypes.WEAPONS: WeaponsBuilder()
+         } [type]
+         return result
+      except KeyError, err:
+         Log(Log.BUILDERROR,"Object key " + type + " not a valid AdvJson object")
+         return None
       
-      # in each condition, create
-      # a builder of the appropriate type
-      # and call Build with that type
+   def Build(self,jsonData):
+      try:
+         # jsonDict may be a list of dictionaries
+         listTest = jsonData[0]
+      except KeyError, err:
+         # or it is a dictionary, so insert it into a list for simplicity
+         jsonData = [jsonData]
+      except Exception, err:
+         # or there was an error
+         Log(Log.BUILDERROR,"AdvJsonBuild unable to build an object " + str(jsonData))
+         return None
+         
+      # iterate over list, making appropriate builders each time
+      resultList = []
+      for jsonDict in jsonData:
+         try:
+            builder = self.__getBuilder(jsonDict[JsonBuildTypes.TYPE])
+         except Exception, err:
+            builder = None
+         if None != builder:
+            builder.SetJson(jsonDict)
+            resultList.append(builder.Build())
+         
+      return resultList
+      

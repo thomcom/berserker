@@ -24,13 +24,13 @@ class MainStory:
    @classmethod
    def LoadAllStories(cls):
       # TODO: Use AdvDataRetrieve
-      berserker_file = io.open("./advmodel/json/StoryDefault.json")
+      berserker_file = io.open("./json/StoryDefault.json")
       parsedJson = json.loads(berserker_file.read())
       cls.all_stories = [parsedJson]
          
    def __init__(self,the_player):
       # Use players class to weight story loading decision
-      my_story = MainStory.all_stories[0]['mainstory']
+      my_story = MainStory.all_stories[0][0]
       self.name = my_story['name']
       self.end = End(my_story['End']['message'],my_story['End']['reward'])
       self.menu = Menu(my_story['Menu']['choices'],my_story['Menu']['text'])

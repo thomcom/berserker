@@ -1,7 +1,8 @@
 # ClassBuilder creates an instance of a Class object given a data source
+from advmodel.AdvBuilders import AbstractBuilder
 
-from AdvDataObjects import Class
+from advmodel.AdvDataObjects import Class
 
-class ClassBuilder:
+class ClassBuilder(AbstractBuilder):
    def Build(self):
       result = Class

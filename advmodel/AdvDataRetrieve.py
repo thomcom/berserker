@@ -10,7 +10,7 @@ from advview import Log
 # loads local file game data
 class AdvFileJsonDataRetrieve:
    def __init__(self):
-      print(__file__)
+      self.armorPath = "./json/Armor.json"
       self.defaultsPath = "./json/English.json"
       self.itemPath = "./json/Items.json"
       self.weaponPath = "./json/Weapons.json"
@@ -29,6 +29,8 @@ class AdvFileJsonDataRetrieve:
          Log(Log.FILEERROR,str(err))
       except Exception, err:
          Log(Log.DATAERROR,"Error getting json " + str(err))
+   def GetArmor(self):
+      return self.__getJson(self.armorPath)
    def GetDefaults(self):
       return self.__getJson(self.modelDefaultsPath)
    def GetItems(self):

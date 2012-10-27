@@ -2,65 +2,73 @@
    {
       "object-type" : "armor",
       "name" : "cuirboulli breastplate",
-      "description" : "Boiled hide makes surprisingly effective armor.",
+      "text" : "Boiled hide makes surprisingly effective armor.",
       "armor" : "1d4",
       "value" : 2,
+      "usability" : ["armor"],
       "salable" : true
    },
    {
       "object-type" : "armor",
       "name" : "brigandine coat",
-      "description" : "This armor is made up of a coat reinforced by strips of iron.",
+      "text" : "This armor is made up of a coat reinforced by strips of iron.",
       "armor" : "1d6",
       "value" : 5,
+      "usability" : ["armor"],
       "salable" : true
    },
    {
       "object-type" : "armor",
       "name" : "ancient armor",
-      "description" : "Excavated from mysterious ruins, this breastplate has an exotic design.",
+      "text" : "Excavated from mysterious ruins, this breastplate has an exotic design.",
       "armor" : "1d8",
       "value" : 8,
+      "usability" : ["armor"],
       "salable" : true
    },
    {
       "object-type" : "armor",
       "name" : "mail hauberk",
-      "description" : "This shirt of steel rings is heavy, but highly protective.",
+      "text" : "This shirt of steel rings is heavy, but highly protective.",
       "armor" : "1d10",
       "value" : 15,
+      "usability" : ["armor"],
       "salable" : true
    },
    {
       "object-type" : "armor",
       "name" : "scale armor",
-      "description" : "Overlapping scales prevent all but the strongest of blows from piercing this armor.",
+      "text" : "Overlapping scales prevent all but the strongest of blows from piercing this armor.",
       "armor" : "2d6",
       "value" : 40,
+      "usability" : ["armor"],
       "salable" : true
    },
    {
       "object-type" : "armor",
       "name" : "plate armor",
-      "description" : "Surprisingly light, this suit of armor encases the entire body in gleaming steel.",
+      "text" : "Surprisingly light, this suit of armor encases the entire body in gleaming steel.",
       "armor" : "2d8",
       "value" : 300,
+      "usability" : ["armor"],
       "salable" : true
    },
    {
       "object-type" : "armor",
       "name" : "wraith shroud",
-      "description" : "Donning this cursed burial wrap causes some attacks to pass through the wearer harmlessly.",
+      "text" : "Donning this cursed burial wrap causes some attacks to pass through the wearer harmlessly.",
       "armor" : "2d10",
       "value" : 500,
+      "usability" : ["armor"],
       "salable" : true
    },
    {
       "object-type" : "armor",
       "name" : "enchanted mail",
-      "description" : "Complex runes etched into this armor prevent weapons from even touching it.",
+      "text" : "Complex runes etched into this armor prevent weapons from even touching it.",
       "armor" : "4d8",
       "value" : 3000,
+      "usability" : ["armor"],
       "salable" : true
    }
 ]

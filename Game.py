@@ -8,6 +8,7 @@ class Game:
    def Launch(self):
       m = Model()
       m.PreloadItems()
+      m.PreloadArmor()
       m.PreloadClasses()
       m.PreloadMonsters()
       m.PreloadSideQuests()

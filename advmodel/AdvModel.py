@@ -40,6 +40,7 @@ class Model:
       Log(Log.STATUS,"Preloading armor")
       armor = self.data.GetArmor()
       self.armor = self.builder.Build(armor)
+      print(self.armor)
    def PreloadClasses(self):
       Log(Log.STATUS,"Preloading classes")
       classes = self.data.GetClasses()
