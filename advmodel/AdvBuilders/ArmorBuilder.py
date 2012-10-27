@@ -5,7 +5,8 @@ from advview.Log import Log
 
 class ArmorBuilder(ItemBuilder):
    def Build(self):
-      result = Armor(ItemBuilder.Build(self))
+      result = ItemBuilder.Build(self)
+      result.__class__ = Armor
       
       armorVal = self.jsonData["armor"]
       

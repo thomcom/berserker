@@ -8,9 +8,6 @@ class Armor(Item):
       self.armorDice = 1
       self.armorDie = 2
       self.armorMod = 0
-   def __init__(self,item):
-      self = item
-      self.__init__()
    def __str__(self):
       returnString = "Armor: %dd%d" % (self.armorDice,self.armorDie)
       try:
@@ -20,7 +17,7 @@ class Armor(Item):
             returnString.append("-%d" % self.armorMod)
       except Exception, err:
          pass
-      return Item().__str__() + """
+      return Item.__str__(self) + """
          """ + returnString
    def __repr__(self):
       return self.__str__()
