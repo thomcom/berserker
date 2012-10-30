@@ -1,2 +1,4 @@
+from Item import Item
 from Armor import Armor
-from .Item import Item
+from Weapon import Weapon
+from DieRoll import DieRoll

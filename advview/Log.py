@@ -1,5 +1,7 @@
 # Logging
 
+import datetime
+
 class Log:
    STATUS = "Log.STATUS"
    DATAERROR = "Log.DATAERROR"
@@ -10,5 +12,6 @@ class Log:
    def __init__(self,log_type,string):
       #if log_type == Log.STATUS:
          # TODO: append to file with time etc
-      #   print(string)
-      print(log_type,string)
+      time = datetime.datetime.now()
+      tstamp = "%s%s%s-%s:%s:%s" % tuple(time.timetuple())[0:6]
+      print(tstamp + " " + log_type + " " + string)

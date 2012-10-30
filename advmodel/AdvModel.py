@@ -21,6 +21,18 @@ class Model:
       self.side_quests = []
       self.stories = []
 
+   # dynamic model data loader
+   def AddObjects(self,objects):
+      # put objects into list
+      try:
+         testList = objects[0]
+      except Exception, err:
+         objects = [objects]
+
+      for obj in objects:
+         pass
+         
+
 ###########################################################
 # Data preloading
 ###########################################################

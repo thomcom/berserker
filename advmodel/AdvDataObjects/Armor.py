@@ -1,23 +1,15 @@
 # Class for Armor items
 
 from Item import Item
+from DieRoll import DieRoll
 
 class Armor(Item):
    def __init__(self):
-      super().__init__()
-      self.armorDice = 1
-      self.armorDie = 2
-      self.armorMod = 0
+      Item.__init__(self)
+      self.armor = DieRoll("1d2")
    def __str__(self):
-      returnString = "Armor: %dd%d" % (self.armorDice,self.armorDie)
-      try:
-         if self.armorMod > 0:
-            returnString.append("+%d" % self.armorMod)
-         else:
-            returnString.append("-%d" % self.armorMod)
-      except Exception, err:
-         pass
-      return Item.__str__(self) + """
-         """ + returnString
+      result = Item.__str__(self)
+      return result + """
+         Armor: """ + str(self.armor)
    def __repr__(self):
       return self.__str__()

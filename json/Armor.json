@@ -48,7 +48,7 @@
       "object-type" : "armor",
       "name" : "plate armor",
       "text" : "Surprisingly light, this suit of armor encases the entire body in gleaming steel.",
-      "armor" : "2d8",
+      "armor" : "2d8+1",
       "value" : 300,
       "usability" : ["armor"],
       "salable" : true
@@ -66,7 +66,7 @@
       "object-type" : "armor",
       "name" : "enchanted mail",
       "text" : "Complex runes etched into this armor prevent weapons from even touching it.",
-      "armor" : "4d8",
+      "armor" : "4d8-2",
       "value" : 3000,
       "usability" : ["armor"],
       "salable" : true
