@@ -4,14 +4,37 @@ import datetime
 
 class Log:
    STATUS = "Log.STATUS"
+   DUMP = "Log.DUMP"
    DATAERROR = "Log.DATAERROR"
-   FILERROR = "Log.FILEERROR"
+   FILEERROR = "Log.FILEERROR"
    BUILDERROR = "Log.BUILDERROR"
    
-   status_filename = "advstatus.log"
-   def __init__(self,log_type,string):
-      #if log_type == Log.STATUS:
-         # TODO: append to file with time etc
+   @classmethod
+   def GetTimestamp(cls):
       time = datetime.datetime.now()
-      tstamp = "%s%s%s-%s:%s:%s" % tuple(time.timetuple())[0:6]
-      print(tstamp + " " + log_type + " " + string)
+      return "%s%s%s-%s:%s:%s" % tuple(time.timetuple())[0:6]      
+   
+   prefix = ""
+   @classmethod
+   def SetSessionTimestamp(cls):
+      Log.prefix = "AdvLog" + Log.GetTimestamp()
+      
+   def __init__(self,log_type,string):
+
+      outfile = {
+         Log.DUMP : open(Log.prefix + "Adv_model.dump","a"),
+         Log.STATUS : open(Log.prefix + "Adv_status_log.txt","a"),
+         Log.DATAERROR : open(Log.prefix + "Adv_error_log.txt","a"),
+         Log.FILEERROR : open(Log.prefix + "Adv_error_log.txt","a"),
+         Log.BUILDERROR : open(Log.prefix + "Adv_error_log.txt","a")
+      } [log_type]
+
+      output = Log.GetTimestamp() + " " + log_type + " " + str(string) + "\n"
+      
+      debug = False
+      if debug:
+         print(output)
+      else:
+         outfile.write(output)
+      
+      outfile.close()

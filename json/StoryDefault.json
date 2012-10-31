@@ -321,12 +321,13 @@
       "name" : "rat pelt",
       "text" : "If this pelt weren't frozen it would be smelly and surrounded by buzzing flies.",
       "value" : 15,
+      "usability" : null,
       "salability" : false
    },
    {
       "object-type" : "weapon",
       "name" : "obsidian axe",
-      "description" : "The favored weapon of many northern tribes.",
+      "text" : "The favored weapon of many northern tribes.",
       "damage" : "1d8",
       "usability" : ["weapon"],
       "value" : 7,
@@ -335,7 +336,7 @@
    {
       "object-type" : "weapon",
       "name" : "knife",
-      "description" : "A simple, rudimentary knife.",
+      "text" : "A simple, rudimentary knife.",
       "damage" : "1d4",
       "usability" : ["weapon"],
       "value" : 3,
@@ -344,7 +345,7 @@
    {
       "object-type" : "weapon",
       "name" : "assassin's blade",
-      "description" : "Precise blacksmithing wrought this sharp and balanced blade.",
+      "text" : "Precise blacksmithing wrought this sharp and balanced blade.",
       "damage" : "1d10",
       "usability" : ["weapon"],
       "value" : 65,
@@ -368,7 +369,7 @@
    {
       "object-type" : "weapon",
       "name" : "Blade of Throk",
-      "description" : "A massive chieftan's sword.",
+      "text" : "A massive chieftan's sword.",
       "damage" : "1d10+6",
       "usability" : ["weapon"],
       "value" : 250,
@@ -377,7 +378,7 @@
    {
       "object-type" : "armor",
       "name" : "ancient helmet",
-      "description" : "A stunning helmet fashioned from techniques completely lost on your barbaric people.",
+      "text" : "A stunning helmet fashioned from techniques completely lost on your barbaric people.",
       "armor" : "1d10+10",
       "usability" : ["armor"],
       "value" : 700,

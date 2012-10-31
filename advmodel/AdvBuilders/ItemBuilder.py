@@ -6,25 +6,31 @@ from advview.Log import Log
 class ItemBuilder(AbstractBuilder):
    def Build(self):
       result = Item()
+      
+      # Item must have name, text, and value
+      # Other attributes are optional
       try:
          result.name = self.jsonData["name"]
       except Exception, err:
-         Log(Log.BUILDERROR," Item name\n" + str(result))
+         Log(Log.BUILDERROR," Item name" + str(self.jsonData))
+         return None
          
       try:
          result.text = self.jsonData["text"]
       except Exception, err:
-         Log(Log.BUILDERROR," Item text\n" + str(result))
+         Log(Log.BUILDERROR," Item text" + str(self.jsonData))
+         return None
       
       try:
          result.value = self.jsonData["value"]
       except Exception, err:
-         Log(Log.BUILDERROR," Item value\n" + str(result))
+         Log(Log.BUILDERROR," Item value" + str(self.jsonData))
+         return None
 
       try:
          result.usability = self.jsonData["usability"]
       except Exception, err:
-         Log(Log.BUILDERROR," Item usability\n" + str(result))
+         Log(Log.BUILDERROR," Item usability" + str(self.jsonData))
 
       try:
          result.salable = self.jsonData["salable"]

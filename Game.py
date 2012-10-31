@@ -3,11 +3,14 @@ from advmodel import Model
 from advmodel import Types
 from advcontroller import Controller
 from advview import View
+from advview import Log
 
 class Game:
    def Launch(self):
+      Log.SetSessionTimestamp()
       m = Model()
       m.PreloadItems()
+      m.PreloadWeapons()
       m.PreloadArmor()
       m.PreloadClasses()
       m.PreloadMonsters()

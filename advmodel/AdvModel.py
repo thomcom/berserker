@@ -40,19 +40,22 @@ class Model:
       Log(Log.STATUS,"Loading settings")
       settings = self.data.GetDefaults()
       self.settings = self.builder.Build(settings)
+      Log(Log.DUMP,"Dumping settings:\n"+str(self.settings))
    def PreloadItems(self):
       Log(Log.STATUS,"Preloading items")
       items = self.data.GetItems()
       self.items = self.builder.Build(items)
+      Log(Log.DUMP,"Dumping items:\n"+str(self.items))
    def PreloadWeapons(self):
       Log(Log.STATUS,"Preloading weapons")
       weapons = self.data.GetWeapons()
       self.weapons = self.builder.Build(weapons)
+      Log(Log.DUMP,"Dumping weapons:\n"+str(self.weapons))
    def PreloadArmor(self):
       Log(Log.STATUS,"Preloading armor")
       armor = self.data.GetArmor()
       self.armor = self.builder.Build(armor)
-      print(self.armor)
+      Log(Log.DUMP,"Dumping armor:\n"+str(self.armor))
    def PreloadClasses(self):
       Log(Log.STATUS,"Preloading classes")
       classes = self.data.GetClasses()

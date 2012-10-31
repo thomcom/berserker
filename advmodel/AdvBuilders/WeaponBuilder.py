@@ -9,13 +9,11 @@ class WeaponBuilder(ItemBuilder):
       builder = ItemBuilder()
       builder.SetJson(self.jsonData)
       result = builder.Build()
-      result.__class__ = Weapon
       
       try:
+         result.__class__ = Weapon
          result.damage = DieRoll(self.jsonData["damage"])
-      except Exception, err:
-         # TODO: Handle various DieRollInitExceptions
-         Log(Log.BUILDERROR,"DieRoll throws an exception!!!")
-         result.damage = DieRoll("1d2")
+      except Exception:
+         return None
 
       return result
