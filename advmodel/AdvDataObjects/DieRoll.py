@@ -43,7 +43,6 @@ class DieRoll:
       
       if dieSplit[1].count("-"):
          dieMod = dieSplit[1].split("-")
-         print(dieMod)
          self.die = int(dieMod[0])
          if( len(dieMod) > 1):
             self.modifier = -int(dieMod[1])
@@ -54,7 +53,6 @@ class DieRoll:
          if( len(dieMod) > 1):
             self.modifier = int(dieMod[1])
 
-      print("Got to end of DieRoll, me is " + str(self))
       return self
    def GetRoll(self):
       return sum(randint(1,self.die) for k in range(self.dice))+self.modifier
