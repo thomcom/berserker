@@ -32,7 +32,7 @@ class AdvFileJsonDataRetrieve:
    def GetArmor(self):
       return self.__getJson(self.armorPath)
    def GetDefaults(self):
-      return self.__getJson(self.modelDefaultsPath)
+      return self.__getJson(self.defaultsPath)
    def GetItems(self):
       return self.__getJson(self.itemPath)
    def GetWeapons(self):

@@ -9,6 +9,7 @@ class Game:
    def Launch(self):
       Log.SetSessionTimestamp()
       m = Model()
+      m.LoadSettings()
       m.PreloadItems()
       m.PreloadWeapons()
       m.PreloadArmor()

@@ -50,7 +50,7 @@
    {
       "object-type" : "weapon",
       "name" : "steel short sword",
-      "description" : "This sword is a real weapon, a soldier's blade that can keep any improvised weapon at bay.",
+      "text" : "This sword is a real weapon, a soldier's blade that can keep any improvised weapon at bay.",
       "damage" : "1d8",
       "value" : 15,
       "usability" : ["weapon"]
