@@ -14,3 +14,4 @@ from StoriesBuilder import StoriesBuilder
 from StoryBuilder import StoryBuilder
 from WeaponBuilder import WeaponBuilder
 from WeaponsBuilder import WeaponsBuilder
+from AdvEventsBuilder import *

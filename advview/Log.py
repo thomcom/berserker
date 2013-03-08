@@ -12,7 +12,7 @@ class Log:
    @classmethod
    def GetTimestamp(cls):
       time = datetime.datetime.now()
-      return "%s%s%s-%s:%s:%s" % tuple(time.timetuple())[0:6]      
+      return "%s%s%s-%s:%s:%s" % tuple(map(lambda x: str(x).zfill(2), time.timetuple()[0:6]))
    
    prefix = ""
    @classmethod

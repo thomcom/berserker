@@ -66,7 +66,7 @@
    },
    "BuyItemEv" : {
       "title" : "You bought %s!",
-      "eqiup-reminder" : "Don't forget to equip it!",
+      "equip-reminder" : "Don't forget to equip it!",
       "use-reminder" : "You can use it in battle for an edge.",
       "non-combat" : "This item can only be used outside of combat."
    },

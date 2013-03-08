@@ -5,6 +5,14 @@ class Event:
    def __init__(self):
       self.next = None
       self.prev = None
+   def __str__(self):
+      result = ""
+      keys = vars(self).keys()
+      for key in keys:
+         result += "%s : %s\n" % tuple((key,vars(self)[key]))
+      return result
+   def __repr__(self):
+      return self.__str__()
 
 class WelcomeEv(Event):
    def __init__(self):
