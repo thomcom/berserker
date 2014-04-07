@@ -1,6 +1,6 @@
 [
    {
-      "object-type" : "armor",
+      "object_type" : "armor",
       "name" : "cuirboulli breastplate",
       "text" : "Boiled hide makes surprisingly effective armor.",
       "armor" : "1d4",
@@ -9,7 +9,7 @@
       "salable" : true
    },
    {
-      "object-type" : "armor",
+      "object_type" : "armor",
       "name" : "brigandine coat",
       "text" : "This armor is made up of a coat reinforced by strips of iron.",
       "armor" : "1d6",
@@ -18,7 +18,7 @@
       "salable" : true
    },
    {
-      "object-type" : "armor",
+      "object_type" : "armor",
       "name" : "ancient armor",
       "text" : "Excavated from mysterious ruins, this breastplate has an exotic design.",
       "armor" : "1d8",
@@ -27,7 +27,7 @@
       "salable" : true
    },
    {
-      "object-type" : "armor",
+      "object_type" : "armor",
       "name" : "mail hauberk",
       "text" : "This shirt of steel rings is heavy, but highly protective.",
       "armor" : "1d10",
@@ -36,7 +36,7 @@
       "salable" : true
    },
    {
-      "object-type" : "armor",
+      "object_type" : "armor",
       "name" : "scale armor",
       "text" : "Overlapping scales prevent all but the strongest of blows from piercing this armor.",
       "armor" : "2d6",
@@ -45,7 +45,7 @@
       "salable" : true
    },
    {
-      "object-type" : "armor",
+      "object_type" : "armor",
       "name" : "plate armor",
       "text" : "Surprisingly light, this suit of armor encases the entire body in gleaming steel.",
       "armor" : "2d8+1",
@@ -54,7 +54,7 @@
       "salable" : true
    },
    {
-      "object-type" : "armor",
+      "object_type" : "armor",
       "name" : "wraith shroud",
       "text" : "Donning this cursed burial wrap causes some attacks to pass through the wearer harmlessly.",
       "armor" : "2d10",
@@ -63,7 +63,7 @@
       "salable" : true
    },
    {
-      "object-type" : "armor",
+      "object_type" : "armor",
       "name" : "enchanted mail",
       "text" : "Complex runes etched into this armor prevent weapons from even touching it.",
       "armor" : "4d8-2",
@@ -71,4 +71,5 @@
       "usability" : ["armor"],
       "salable" : true
    }
-]
+] 
+

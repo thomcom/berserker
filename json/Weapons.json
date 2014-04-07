@@ -1,6 +1,6 @@
 [
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "wood sword",
       "text" : "This sturdy, heavy bludgeon includes a guard for sparring and practice.",
       "damage" : "1d4",
@@ -8,7 +8,7 @@
       "usability" : ["weapon"]
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "staff",
       "text" : "A six foot staff is a valuable tool for any traveller.",
       "damage" : "1d4",
@@ -16,7 +16,7 @@
       "usability" : ["weapon"]
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "knife",
       "text" : "A simple iron blade for slicing and piercing.",
       "damage" : "1d4",
@@ -24,7 +24,7 @@
       "usability" : ["weapon"]
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "spear",
       "text" : "A spear is an effective weapon because it increase the reach of its wielder",
       "damage" : "1d6",
@@ -32,7 +32,7 @@
       "usability" : ["weapon"]
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "hatchet",
       "text" : "A hatchet packs a heavy punch in a small portable package.",
       "damage" : "1d6",
@@ -40,7 +40,7 @@
       "usability" : ["weapon"]
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "tree axe",
       "text" : "A tree axe is an unwieldy weapon, but strikes with sufficient force and consistency to fell a tree.  No sword can compete with that.",
       "damage" : "1d8",
@@ -48,7 +48,7 @@
       "usability" : ["weapon"]
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "steel short sword",
       "text" : "This sword is a real weapon, a soldier's blade that can keep any improvised weapon at bay.",
       "damage" : "1d8",
@@ -56,7 +56,7 @@
       "usability" : ["weapon"]
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "steel bastard sword",
       "text" : "A long blade suitable for use one or two handed.  Immensely lethal in the hands of a trained wielder.",
       "damage" : "2d6",
@@ -64,7 +64,7 @@
       "usability" : ["weapon"]
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "ancient sword",
       "text" : "This sword was produced with techniques that are now lost.  It seems to leap from your hand into battle.",
       "damage" : "2d10",
@@ -72,7 +72,7 @@
       "usability" : ["weapon"]
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "mystic sword",
       "text" : "A weapon that appears at times most suited to it and wielded by only those of legendary fame.",
       "damage" : "4d10",

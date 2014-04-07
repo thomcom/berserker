@@ -1,6 +1,6 @@
 [
    {
-      "object-type" : "item",
+      "object_type" : "item",
       "name" : "apple",
       "text" : "Your apple hits the spot.",
       "value" : 1,
@@ -14,7 +14,7 @@
       ]
    },
    {
-      "object-type" : "item",
+      "object_type" : "item",
       "name" : "loaf of bread",
       "text" : "Bread is filling and satisfying.",
       "value" : 2,
@@ -28,7 +28,7 @@
       ]
    },
    {
-      "object-type" : "item",
+      "object_type" : "item",
       "name" : "pony key of cider",
       "text" : "This spiced beverage is very refreshing!",
       "value" : 10,
@@ -42,7 +42,7 @@
       ]
    },
    {
-      "object-type" : "item",
+      "object_type" : "item",
       "name" : "pony keg of ale",
       "text" : "Rapid consumption of four pints of ale brings you considerable fortune.",
       "value" : 25,
@@ -60,7 +60,7 @@
       ]
    },
    {
-      "object-type" : "item",
+      "object_type" : "item",
       "name" : "healing potion",
       "text" : "Chalky and sour, nobody drinks a potion of healing until they have to.",
       "value" : 100,
@@ -74,7 +74,7 @@
       ]
    },
    {
-      "object-type" : "item",
+      "object_type" : "item",
       "name" : "elixir",
       "text" : "You drink elixir!\nIt isn't natural.",
       "value" : 2500,
@@ -92,7 +92,7 @@
       ]
    },         
    {
-      "object-type" : "item",      
+      "object_type" : "item",      
       "name" : "vial of acid",
       "text" : "You hurl a the acid vial at %s!",
       "value" : 10,

@@ -1,7 +1,9 @@
 [
+   "storyline",
    {
-      "object-type" : "story",      
+      "object_type" : "story",
       "name" : "Call of The Berserker",
+      "short_name" : "berserker",
       "opening" : "Ancient tribal legend tells of the Berserker - Uniter of tribes and breaker of traditions.  Even as a child you have trusted that you are destined for greatness...",
       "Events" :
       [
@@ -78,7 +80,7 @@
    },
    "monsters",
    {
-      "object-type" : "monster",
+      "object_type" : "monster",
       "name" : "Tundra Rat",
       "level" : 1,
       "battle" :
@@ -92,7 +94,7 @@
       }
    },
    {
-      "object-type" : "monster",
+      "object_type" : "monster",
       "name" : "Furry Wolverine",
       "level" : 2,
       "battle" :
@@ -101,7 +103,7 @@
       }
    },
    {
-      "object-type" : "monster",
+      "object_type" : "monster",
       "name" : "Barbarian Warrior",
       "level" : 3,
       "battle" :
@@ -120,7 +122,7 @@
       }
    },
    {
-      "object-type" : "monster",
+      "object_type" : "monster",
       "name" : "Assassin",
       "level" : 4,
       "battle" :
@@ -140,13 +142,13 @@
       }
    },
    {
-      "object-type" : "monster",
+      "object_type" : "monster",
       "name" : "Throk Chief of Wind",
       "level" : 6,
       "battle" :
       {
          "attack" : [ "roars, \"Suffer, for you are the lesser man!\".", "swings a two-handed sword at you in a downward chop!", "slashes!" ],
-         "combat-item" :
+         "combat_item" :
          {
             "name" : "healing potion",
             "conditions" :
@@ -168,7 +170,7 @@
       }
    },
    {
-      "object-type" : "monster",
+      "object_type" : "monster",
       "name" : "Groth Forest Chieftan",
       "level" : 6,
       "battle" :
@@ -186,7 +188,7 @@
       }
    },
    {
-      "object-type" : "monster",
+      "object_type" : "monster",
       "name" : "Strange Chieftan",
       "level" : 7,
       "battle" :
@@ -203,7 +205,7 @@
       }
    },
    {
-      "object-type" : "monster",
+      "object_type" : "monster",
       "name" : "Frost Giant",
       "level" : 8,
       "battle" :
@@ -212,7 +214,7 @@
          "cast" : 
          [
             {
-               "spell-text" : "laughs as lightning bolts arc out of the sky at you!",
+               "spell_text" : "laughs as lightning bolts arc out of the sky at you!",
                "damage" : 
                {
                   "minimum" : 25,
@@ -241,7 +243,7 @@
       }
    },
    {
-      "object-type" : "monster",
+      "object_type" : "monster",
       "name" : "Spirit of the Curse",
       "level" : 9,
       "battle" :
@@ -249,7 +251,7 @@
          "cast" :
          [
             {
-               "spell-text" : "threatens to overwhelm you.",
+               "spell_text" : "threatens to overwhelm you.",
                "frequency" : 20,
                "damage" :
                {
@@ -258,7 +260,7 @@
                }
             },
             {
-               "spell-text" : "binds you, leaving you powerless.",
+               "spell_text" : "binds you, leaving you powerless.",
                "frequency" : 30,
                "effect" : 
                {
@@ -271,7 +273,7 @@
                }
             },
             {
-               "spell-text" : "turns your efforts against you.",
+               "spell_text" : "turns your efforts against you.",
                "effect" : 
                {
                   "minimum" : 5,
@@ -282,7 +284,7 @@
       }
    },
    {
-      "object-type" : "monster",
+      "object_type" : "monster",
       "name" : "Ancient Dragon Algernon",
       "level" : 10,
       "battle" :
@@ -295,7 +297,7 @@
          "cast" :
          [
             {
-               "spell-name" : "vomits a heavy mist of sticky acid upon you and everywhere around you.",
+               "spell_text" : "vomits a heavy mist of sticky acid upon you and everywhere around you.",
                "frequency" : 20,
                "damage" :
                {
@@ -304,7 +306,7 @@
                }
             },
             {
-               "spell-name" : "causes the earth to tremble!",
+               "spell_text" : "causes the earth to tremble!",
                "frequency" : 30,
                "effect" :
                {
@@ -317,7 +319,7 @@
    },
    "items",
    {
-      "object-type" : "item",
+      "object_type" : "item",
       "name" : "rat pelt",
       "text" : "If this pelt weren't frozen it would be smelly and surrounded by buzzing flies.",
       "value" : 15,
@@ -325,7 +327,7 @@
       "salability" : false
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "obsidian axe",
       "text" : "The favored weapon of many northern tribes.",
       "damage" : "1d8",
@@ -334,7 +336,7 @@
       "salability" : true
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "knife",
       "text" : "A simple, rudimentary knife.",
       "damage" : "1d4",
@@ -343,7 +345,7 @@
       "salability" : true
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "assassin's blade",
       "text" : "Precise blacksmithing wrought this sharp and balanced blade.",
       "damage" : "1d10",
@@ -352,7 +354,7 @@
       "salability" : false
    },
    {
-      "object-type" : "item",      
+      "object_type" : "item",
       "name" : "poison salve",
       "text" : "Guaranteed firepower maximization, ethics not required.  Your next attack will do 3x damage.",
       "value" : 100,
@@ -367,7 +369,7 @@
       "salability" : false
    },
    {
-      "object-type" : "weapon",
+      "object_type" : "weapon",
       "name" : "Blade of Throk",
       "text" : "A massive chieftan's sword.",
       "damage" : "1d10+6",
@@ -376,7 +378,7 @@
       "salability" : false
    },
    {
-      "object-type" : "armor",
+      "object_type" : "armor",
       "name" : "ancient helmet",
       "text" : "A stunning helmet fashioned from techniques completely lost on your barbaric people.",
       "armor" : "1d10+10",

@@ -1,7 +1,7 @@
 {
-   "object-type" : "settings",
-   "game-name" : "Berserker",
-   "any-key" : "Press any key to continue...",
+   "object_type" : "settings",
+   "game_name" : "Berserker",
+   "any_key" : "Press any key to continue...",
    "none" : "none",
    "basics" : {
       "name" : "Name",
@@ -9,24 +9,24 @@
       "level" : "Level",
       "xp" : "XP",
       "hp" : "HP",
-      "hit-points" : "Hit points",
+      "hit_points" : "Hit points",
       "mp" : "MP",
-      "magic-points" : "Magic points",
+      "magic_points" : "Magic points",
       "weapon" : "Weapon",
       "armor" : "Armor",
       "item" : "Item"
    },
-   "global-menu" : {
+   "global_menu" : {
       "select" : "I)nspect self Q)uit A)bandon your quest",
       "opts" : ["i","q","a"],
-      "abandon-warning" : "If you abandon your quest this character will be deleted and added to the standings board.  This is not reversible.  Are you sure?"
+      "abandon_warning" : "If you abandon your quest this character will be deleted and added to the standings board.  This is not reversible.  Are you sure?"
    },
    "WelcomeEv" : {
       "welcome" : "Welcome to %s!  You have previously braved upon adventure!",
       "select" : "S)elect, C)reate, or D)elete a character",
       "opts" : ["s","c","d"],
-      "delete-warning" : "Deleting your character is not reversible!  Are you sure?",
-      "too-many-to-create" : "You have enough characters.  Finish the game with one or delete it!"
+      "delete_warning" : "Deleting your character is not reversible!  Are you sure?",
+      "too_many_to_create" : "You have enough characters.  Finish the game with one or delete it!"
    },
    "StandingsEv" : {
       "title" : "%s Standings",
@@ -51,8 +51,8 @@
       "title" : "%s is shutting down.  Thanks for playing and come back soon!"
    },
    "PlayerMakeEv" : {
-      "enter-name" : "Enter your name: ",
-      "choose-class" : "Choose your class: "
+      "enter_name" : "Enter your name: ",
+      "choose_class" : "Choose your class: "
    },
    "PlayerInfoEv" : {
       "select" : "D)one",
@@ -66,9 +66,9 @@
    },
    "BuyItemEv" : {
       "title" : "You bought %s!",
-      "equip-reminder" : "Don't forget to equip it!",
-      "use-reminder" : "You can use it in battle for an edge.",
-      "non-combat" : "This item can only be used outside of combat."
+      "equip_reminder" : "Don't forget to equip it!",
+      "use_reminder" : "You can use it in battle for an edge.",
+      "non_combat" : "This item can only be used outside of combat."
    },
    "AchievementsEv" : {
       "title" : "You are a well seasoned berserker!",
