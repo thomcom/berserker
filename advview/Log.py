@@ -1,6 +1,7 @@
 # Logging
 
 import datetime
+from os import mkdir
 
 class Log:
    STATUS = "Log.STATUS"
@@ -17,9 +18,13 @@ class Log:
    prefix = ""
    @classmethod
    def SetSessionTimestamp(cls):
-      Log.prefix = "AdvLog" + Log.GetTimestamp()
+      Log.prefix = "logs/AdvLog" + Log.GetTimestamp()
       
    def __init__(self,log_type,string):
+      try:
+         mkdir('logs')
+      except:
+         pass
 
       outfile = {
          Log.DUMP : open(Log.prefix + "Adv_model.dump","a"),

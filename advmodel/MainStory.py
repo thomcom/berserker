@@ -30,7 +30,9 @@ class MainStory:
          
    def __init__(self,the_player):
       # Use players class to weight story loading decision
-      my_story = MainStory.all_stories[0][0]
+      my_story = MainStory.all_stories[0][1]
+      print MainStory.all_stories
+      print my_story
       self.name = my_story['name']
       self.end = End(my_story['End']['message'],my_story['End']['reward'])
       self.menu = Menu(my_story['Menu']['choices'],my_story['Menu']['text'])
