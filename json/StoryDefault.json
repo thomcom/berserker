@@ -1,6 +1,5 @@
-[
-   "storyline",
-   {
+{
+     "storyline" : {
       "object_type" : "story",
       "name" : "Call of The Berserker",
       "short_name" : "berserker",
@@ -8,6 +7,7 @@
       "Events" :
       [
          {
+            "event":"",
             "message" : "You travel north into frozen fields.  3 arctic rats think you are more delicious than the tubers you were sent to harvest.",
             "success" : "You bring 3 rat pelts and 60 pounds of tubers home to an ecstatic village.",
             "fail" : "The rats chase you home.  You pray to Khul that tubers remain there after you've regrouped.",
@@ -77,313 +77,318 @@
          "choices" : ["d","b","t","r"],
          "text" : "Dry wind blows across the cold wastes.\nD)iscover your might\nB)uild your wealth\nT)rade\nR)est"
       }
-   },
-   "monsters",
-   {
-      "object_type" : "monster",
-      "name" : "Tundra Rat",
-      "level" : 1,
-      "battle" :
-      {
-         "attack" : [ "bites!", "grabs with tiny claws!" ],
-         "delay" : [ "scampers around" ]
-      },
-      "loot" :
-      {
-         "item" : "rat pelt"
-      }
-   },
-   {
-      "object_type" : "monster",
-      "name" : "Furry Wolverine",
-      "level" : 2,
-      "battle" :
-      {
-         "attack" : [ "roars and lunges!", "tries to shake you in its mouth!" ]
-      }
-   },
-   {
-      "object_type" : "monster",
-      "name" : "Barbarian Warrior",
-      "level" : 3,
-      "battle" :
-      {
-         "attack" : [ "slashes at you with his axe!", "tries to clobber you!" ]
-      },
-      "loot" :
-      {
-         "item" : "obsidian axe",
-         "item" : "knife",
-         "gold" :
-         {
-            "minimum" : 50,
-            "random" : 100
-         }
-      }
-   },
-   {
-      "object_type" : "monster",
-      "name" : "Assassin",
-      "level" : 4,
-      "battle" :
-      {
-         "attack" : [ "tries to murder you!", "is about to murder the Chieftan!" ]
-      },
-      "loot" :
-      {
-         "item" : "assassin's blade",
-         "gold" :
-         {
-            "minimum" : 100,
-            "random" : 200
-         },
-         "item" : "healing potion",
-         "item" : "poison salve"
-      }
-   },
-   {
-      "object_type" : "monster",
-      "name" : "Throk Chief of Wind",
-      "level" : 6,
-      "battle" :
-      {
-         "attack" : [ "roars, \"Suffer, for you are the lesser man!\".", "swings a two-handed sword at you in a downward chop!", "slashes!" ],
-         "combat_item" :
-         {
-            "name" : "healing potion",
-            "conditions" :
-            {
-               "hp<5once" : true,
-               "random" : "5%"
-            }
-         }
-      },
-      "loot" :
-      {
-         "item" : "Blade of Throk",
-         "gold" :
-         {
-            "minimum" : 200,
-            "random" : 200
-         },
-         "item" : "healing potion"
-      }
-   },
-   {
-      "object_type" : "monster",
-      "name" : "Groth Forest Chieftan",
-      "level" : 6,
-      "battle" :
-      {
-         "attack" : [ "tries to unseat you from your growing empire.", "wields his axe with prowess.", "tries to headbutt!" ]
-      },
-      "loot" :
-      {
-         "item" : "ancient helmet",
-         "gold" :
-         {
-            "minimum" : 15,
-            "random" : 10
-         }
-      }
-   },
-   {
-      "object_type" : "monster",
-      "name" : "Strange Chieftan",
-      "level" : 7,
-      "battle" :
-      {
-         "attack" : [ "wields razor sharp claws!", "intends to rule over all of the clans.  He attacks!" ]
-      },
-      "loot" :
-      {
-         "gold" :
-         {
-            "minimum" : 1500,
-            "random" : 1000
-         }
-      }
-   },
-   {
-      "object_type" : "monster",
-      "name" : "Frost Giant",
-      "level" : 8,
-      "battle" :
-      {
-         "attack" : [ "nearly crushes you with a tree trunk!", "hurls a boulder" ],
-         "cast" : 
-         [
-            {
-               "spell_text" : "laughs as lightning bolts arc out of the sky at you!",
-               "damage" : 
-               {
-                  "minimum" : 25,
-                  "random" : 15
-               }
-            }
-         ]
-      },
-      "loot" :
-      {
-         "item" :
-         {
-            "name" : "diamond",
-            "chance" : 50
-         },
-         "item" :
-         {
-            "name" : "ruby",
-            "chance" : 50
-         },
-         "item" :
-         {
-            "name" : "ingot",
-            "chance" : 30
-         }
-      }
-   },
-   {
-      "object_type" : "monster",
-      "name" : "Spirit of the Curse",
-      "level" : 9,
-      "battle" :
-      {
-         "cast" :
-         [
-            {
-               "spell_text" : "threatens to overwhelm you.",
-               "frequency" : 20,
-               "damage" :
-               {
-                  "minimum" : 35,
-                  "random" : 15
-               }
-            },
-            {
-               "spell_text" : "binds you, leaving you powerless.",
-               "frequency" : 30,
-               "effect" : 
-               {
-                  "name" : "stun",
-                  "duration" :
-                  {
-                     "minimum" : 1,
-                     "random" : 2
-                  }
-               }
-            },
-            {
-               "spell_text" : "turns your efforts against you.",
-               "effect" : 
-               {
-                  "minimum" : 5,
-                  "random" : 15
-               }
-            }
-         ]  
-      }
-   },
-   {
-      "object_type" : "monster",
-      "name" : "Ancient Dragon Algernon",
-      "level" : 10,
-      "battle" :
-      {
-         "attack" :
-         {
-            "text" : [ "crushes you with claws!", "would rend your body in half with a single bite!" ],
-            "frequency" : 50
-         },
-         "cast" :
-         [
-            {
-               "spell_text" : "vomits a heavy mist of sticky acid upon you and everywhere around you.",
-               "frequency" : 20,
-               "damage" :
-               {
-                  "minimum" : 40,
-                  "random" : 100
-               }
-            },
-            {
-               "spell_text" : "causes the earth to tremble!",
-               "frequency" : 30,
-               "effect" :
-               {
-                  "minimum" : 30,
-                  "random" : 150
-               }
-            }
-         ]  
-      }
-   },
-   "items",
-   {
-      "object_type" : "item",
-      "name" : "rat pelt",
-      "text" : "If this pelt weren't frozen it would be smelly and surrounded by buzzing flies.",
-      "value" : 15,
-      "usability" : null,
-      "salability" : false
-   },
-   {
-      "object_type" : "weapon",
-      "name" : "obsidian axe",
-      "text" : "The favored weapon of many northern tribes.",
-      "damage" : "1d8",
-      "usability" : ["weapon"],
-      "value" : 7,
-      "salability" : true
-   },
-   {
-      "object_type" : "weapon",
-      "name" : "knife",
-      "text" : "A simple, rudimentary knife.",
-      "damage" : "1d4",
-      "usability" : ["weapon"],
-      "value" : 3,
-      "salability" : true
-   },
-   {
-      "object_type" : "weapon",
-      "name" : "assassin's blade",
-      "text" : "Precise blacksmithing wrought this sharp and balanced blade.",
-      "damage" : "1d10",
-      "usability" : ["weapon"],
-      "value" : 65,
-      "salability" : false
-   },
-   {
-      "object_type" : "item",
-      "name" : "poison salve",
-      "text" : "Guaranteed firepower maximization, ethics not required.  Your next attack will do 3x damage.",
-      "value" : 100,
-      "usability" : ["rest"],
-      "effect" :
-      [
-         {
-            "type" : "damage-multiplier",
-            "amount" : "3"
-         }
-      ],
-      "salability" : false
-   },
-   {
-      "object_type" : "weapon",
-      "name" : "Blade of Throk",
-      "text" : "A massive chieftan's sword.",
-      "damage" : "1d10+6",
-      "usability" : ["weapon"],
-      "value" : 250,
-      "salability" : false
-   },
-   {
-      "object_type" : "armor",
-      "name" : "ancient helmet",
-      "text" : "A stunning helmet fashioned from techniques completely lost on your barbaric people.",
-      "armor" : "1d10+10",
-      "usability" : ["armor"],
-      "value" : 700,
-      "salability" : false
-   }
-]
+     },
+     "monsters":
+     [
+       {
+          "object_type" : "monster",
+          "name" : "Tundra Rat",
+          "level" : 1,
+          "lethal" : false,
+          "battle" :
+          {
+             "attack" : [ "bites!", "grabs with tiny claws!" ],
+             "delay" : [ "scampers around" ]
+          },
+          "loot" :
+          {
+             "item" : "rat pelt"
+          }
+       },
+       {
+          "object_type" : "monster",
+          "name" : "Furry Wolverine",
+          "level" : 2,
+          "battle" :
+          {
+             "attack" : [ "roars and lunges!", "tries to shake you in its mouth!" ]
+          }
+       },
+       {
+          "object_type" : "monster",
+          "name" : "Barbarian Warrior",
+          "level" : 3,
+          "battle" :
+          {
+             "attack" : [ "slashes at you with his axe!", "tries to clobber you!" ]
+          },
+          "loot" :
+          {
+             "item" : "obsidian axe",
+             "item" : "knife",
+             "gold" :
+             {
+                "minimum" : 50,
+                "random" : 100
+             }
+          }
+       },
+       {
+          "object_type" : "monster",
+          "name" : "Assassin",
+          "level" : 4,
+          "battle" :
+          {
+             "attack" : [ "tries to murder you!", "is about to murder the Chieftan!" ]
+          },
+          "loot" :
+          {
+             "item" : "assassin's blade",
+             "gold" :
+             {
+                "minimum" : 100,
+                "random" : 200
+             },
+             "item" : "healing potion",
+             "item" : "poison salve"
+          }
+       },
+       {
+          "object_type" : "monster",
+          "name" : "Throk Chief of Wind",
+          "level" : 6,
+          "battle" :
+          {
+             "attack" : [ "roars, \"Suffer, for you are the lesser man!\".", "swings a two-handed sword at you in a downward chop!", "slashes!" ],
+             "combat_item" :
+             {
+                "name" : "healing potion",
+                "conditions" :
+                {
+                   "hp<5once" : true,
+                   "random" : "5%"
+                }
+             }
+          },
+          "loot" :
+          {
+             "item" : "Blade of Throk",
+             "gold" :
+             {
+                "minimum" : 200,
+                "random" : 200
+             },
+             "item" : "healing potion"
+          }
+       },
+       {
+          "object_type" : "monster",
+          "name" : "Groth Forest Chieftan",
+          "level" : 6,
+          "battle" :
+          {
+             "attack" : [ "tries to unseat you from your growing empire.", "wields his axe with prowess.", "tries to headbutt!" ]
+          },
+          "loot" :
+          {
+             "item" : "ancient helmet",
+             "gold" :
+             {
+                "minimum" : 15,
+                "random" : 10
+             }
+          }
+       },
+       {
+          "object_type" : "monster",
+          "name" : "Strange Chieftan",
+          "level" : 7,
+          "battle" :
+          {
+             "attack" : [ "wields razor sharp claws!", "intends to rule over all of the clans.  He attacks!" ]
+          },
+          "loot" :
+          {
+             "gold" :
+             {
+                "minimum" : 1500,
+                "random" : 1000
+             }
+          }
+       },
+       {
+          "object_type" : "monster",
+          "name" : "Frost Giant",
+          "level" : 8,
+          "battle" :
+          {
+             "attack" : [ "nearly crushes you with a tree trunk!", "hurls a boulder" ],
+             "cast" : 
+             [
+                {
+                   "spell_text" : "laughs as lightning bolts arc out of the sky at you!",
+                   "damage" : 
+                   {
+                      "minimum" : 25,
+                      "random" : 15
+                   }
+                }
+             ]
+          },
+          "loot" :
+          {
+             "item" :
+             {
+                "name" : "diamond",
+                "chance" : 50
+             },
+             "item" :
+             {
+                "name" : "ruby",
+                "chance" : 50
+             },
+             "item" :
+             {
+                "name" : "ingot",
+                "chance" : 30
+             }
+          }
+       },
+       {
+          "object_type" : "monster",
+          "name" : "Spirit of the Curse",
+          "level" : 9,
+          "battle" :
+          {
+             "cast" :
+             [
+                {
+                   "spell_text" : "threatens to overwhelm you.",
+                   "frequency" : 20,
+                   "damage" :
+                   {
+                      "minimum" : 35,
+                      "random" : 15
+                   }
+                },
+                {
+                   "spell_text" : "binds you, leaving you powerless.",
+                   "frequency" : 30,
+                   "effect" : 
+                   {
+                      "name" : "stun",
+                      "duration" :
+                      {
+                         "minimum" : 1,
+                         "random" : 2
+                      }
+                   }
+                },
+                {
+                   "spell_text" : "turns your efforts against you.",
+                   "effect" : 
+                   {
+                      "minimum" : 5,
+                      "random" : 15
+                   }
+                }
+             ]  
+          }
+       },
+       {
+          "object_type" : "monster",
+          "name" : "Ancient Dragon Algernon",
+          "level" : 10,
+          "battle" :
+          {
+             "attack" :
+             {
+                "text" : [ "crushes you with claws!", "would rend your body in half with a single bite!" ],
+                "frequency" : 50
+             },
+             "cast" :
+             [
+                {
+                   "spell_text" : "vomits a heavy mist of sticky acid upon you and everywhere around you.",
+                   "frequency" : 20,
+                   "damage" :
+                   {
+                      "minimum" : 40,
+                      "random" : 100
+                   }
+                },
+                {
+                   "spell_text" : "causes the earth to tremble!",
+                   "frequency" : 30,
+                   "effect" :
+                   {
+                      "minimum" : 30,
+                      "random" : 150
+                   }
+                }
+             ]  
+          }
+       }
+     ],
+     "items" :
+     [
+       {
+          "object_type" : "item",
+          "name" : "rat pelt",
+          "text" : "If this pelt weren't frozen it would be smelly and surrounded by buzzing flies.",
+          "value" : 15,
+          "usability" : null,
+          "salability" : true
+       },
+       {
+          "object_type" : "weapon",
+          "name" : "obsidian axe",
+          "text" : "The favored weapon of many northern tribes.",
+          "damage" : "1d8",
+          "usability" : ["weapon"],
+          "value" : 7,
+          "salability" : true
+       },
+       {
+          "object_type" : "weapon",
+          "name" : "knife",
+          "text" : "A simple, rudimentary knife.",
+          "damage" : "1d4",
+          "usability" : ["weapon"],
+          "value" : 3,
+          "salability" : true
+       },
+       {
+          "object_type" : "weapon",
+          "name" : "assassin's blade",
+          "text" : "Precise blacksmithing wrought this sharp and balanced blade.",
+          "damage" : "1d10",
+          "usability" : ["weapon"],
+          "value" : 65,
+          "salability" : false
+       },
+       {
+          "object_type" : "item",
+          "name" : "poison salve",
+          "text" : "Guaranteed firepower maximization, ethics not required.  Your next attack will do 3x damage.",
+          "value" : 100,
+          "usability" : ["rest"],
+          "effect" :
+          [
+             {
+                "type" : "damage-multiplier",
+                "amount" : "3"
+             }
+          ],
+          "salability" : false
+       },
+       {
+          "object_type" : "weapon",
+          "name" : "Blade of Throk",
+          "text" : "A massive chieftan's sword.",
+          "damage" : "1d10+6",
+          "usability" : ["weapon"],
+          "value" : 250,
+          "salability" : false
+       },
+       {
+          "object_type" : "armor",
+          "name" : "ancient helmet",
+          "text" : "A stunning helmet fashioned from techniques completely lost on your barbaric people.",
+          "armor" : "1d10+10",
+          "usability" : ["armor"],
+          "value" : 700,
+          "salability" : false
+       }
+     ]
+}

@@ -62,6 +62,7 @@ class Player:
      self.used_mp    = 0
      self.attack_die = 2
      self.initiative = 1
+     self.story_progress = 0
   def create(self,class_type):
      self.class_type = class_type
      for i in range( len( self.class_list ) ):

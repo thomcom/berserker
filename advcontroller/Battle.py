@@ -10,7 +10,9 @@ class Battle:
       the_enemy = Monster.GetRandomMonster()
       the_battle = Battle(player,the_enemy)
       return the_battle
-        
+   @classmethod
+   def GetBattleWithEnemy(cls,player,enemy):
+      return Battle(player, enemy)
    def __init__(self,player,enemy):
       self.player = player;
       self.enemy = enemy;
@@ -49,7 +51,7 @@ Choose an action: """
                # TODO: player can cast spell if they have ANY mana, doesn't matter if
                # they have enough to cast it
                player_damage  = random.randint(1,Player.GetSpellDamage(spell_choice))
-               player.use_mp( Player.GetSpellManaCost(spell_choice) ) 
+               player.use_mp( Player.GetSpellManaCost(spell_choice) )
                monster_damage = monster.get_attack_damage()
                Output.Main("You cast " + Player.GetSpellName(spell_choice) + " for " + \
                      str(player_damage) + " damage!")
@@ -58,14 +60,13 @@ Choose an action: """
                Output.Main("You don't have enough magic power!")
          if( choice == "1" ):
             player_damage  = player.get_attack_damage()
-            monster_damage = monster.get_attack_damage() 
+            monster_damage = monster.get_attack_damage()
             Output.Main("You attack for " + str(player_damage) + " damage!")
             return self.apply_damages(player,player_damage,monster,monster_damage)
       return player
 
-
    def apply_damages(self,player,player_damage,monster,monster_damage):
-      monster.damaged( player_damage )      
+      monster.damaged( player_damage )
       if( not monster.is_alive() ):
          Output.Main( "=== " + monster.get_name() + " is killed! ===")
          monster.reward(player)
@@ -73,6 +74,9 @@ Choose an action: """
       player.damaged( monster_damage )
       Output.Main( monster.get_name() + " hits you for " + str(monster_damage) + "!" )
       if( not player.is_alive() ):
-         Output.Main("You are killed!")
-         return player
+         if monster.is_lethal:
+            Output.Main("You are killed!")
+         else:
+            player.damage = player.max_hp - 1
+
       return player

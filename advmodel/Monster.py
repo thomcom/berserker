@@ -44,6 +44,8 @@ class Monster(Player):
    def reward(self,player):
       Output.Main("=== You earn " + str(self.get_xp_value()) + "xp! ===")
       player.xp = player.xp + self.get_xp_value()
+      if self.loot:
+          Output.Log(self.loot)
 
 class MonsterBuilder:
    def __init__(self):
@@ -56,10 +58,12 @@ class MonsterBuilder:
          monster = Monster()
          monster.name = json['name']
          monster.level = json['level']
-         monster.max_hp = math.pow(monster.level,2) + 4
-         monster.attack_die = math.pow(monster.level,2)/1.8 + 4
-         monster.xp_value = math.pow(monster.level,4) + 4
+         monster.max_hp = int(math.pow(monster.level,2) + 4)
+         monster.attack_die = int(math.pow(monster.level,2)/1.8 + 4)
+         monster.xp_value = int(math.pow(monster.level,4) + 4)
          monster.battle = json['battle']
+         if 'lethal' in json:
+            monster.is_lethal = json['lethal']
          if 'loot' in json:
             monster.loot = json['loot']
          return monster
@@ -68,7 +72,3 @@ class MonsterBuilder:
          Output.Log(str(err))
          raise
          return 0
-      
-      
-      
-      

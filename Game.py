@@ -20,7 +20,7 @@ class Game:
 
       v = View()
       v.initialize(Types.OSX)
-      
+
       c = Controller()
       c.initialize(Types.OSX)
       c.setModel(m)
