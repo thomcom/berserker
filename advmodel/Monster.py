@@ -62,10 +62,10 @@ class MonsterBuilder:
          monster.attack_die = int(math.pow(monster.level,2)/1.8 + 4)
          monster.xp_value = int(math.pow(monster.level,4) + 4)
          monster.battle = json['battle']
+         monster.loot = json.get('loot')
+         monster.is_lethal = True
          if 'lethal' in json:
             monster.is_lethal = json['lethal']
-         if 'loot' in json:
-            monster.loot = json['loot']
          return monster
       except Exception as err:
          Output.Log("Tried to load bad Monster : " + str(self.jsonSource))

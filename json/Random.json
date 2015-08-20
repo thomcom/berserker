@@ -1,0 +1,87 @@
+{
+  [
+    "__random_event__" : {
+      "message": "An old man asks you for %s gold",
+      "selection": "(G)ive the old man some gold or (R)efuse",
+      "choices" : {
+        "G": {
+          "result": {
+            "message": "He thanks you profusely.",
+            "probability": 50
+          },
+          "result": {
+            "message": "He gives you a grenade!",
+            "probability": 10,
+            "item": "grenade"
+          }
+        },
+        "R": {
+          "result": {
+            "message": "You are cursed!",
+            "probability": 20,
+            "effect": {
+              "attack": -20%
+            }
+          },
+          "result": {
+            "message": "He shrugs.",
+            "probability": 80
+          }
+        }
+      }
+    },
+    "__random_event__" : {
+      "message": "A young girl offers you a shiny red apple",
+      "selection": "(A)ccept or (R)efuse",
+      "choices" : {
+        "A": {
+          "result": {
+            "message": "The apple is delicious! HP + 10",
+            "probability": 50
+          },
+          "result": {
+            "message": "The apple is enchanted!",
+            "probability": 10,
+            "effect": {
+              "strength": +1
+            }
+          },
+          "result": {
+            "message": "You are poisoned!",
+            "probability": 5,
+            "effect": {
+              "strength": -1
+            }
+          }
+        },
+        "R": {
+          "result": {
+            "message": "",
+            "probability": 20
+          }
+        }
+      }
+    },
+    "__random_event__" : {
+      "message": "Wild dogs attack!",
+      "battle": ["Wild dog", "Wild dog"]
+    },
+    "__random_event__" : {
+      "message": "You hear a woman's cries.  You find her fending off unwanted advances!",
+      "battle": "Thug"
+    },
+    "__random_event__" : {
+      "message": "You are interrupted by a wandering black bear!",
+      "battle": "Black bear"
+    },
+    "__random_event__" : {
+      "message": "Out of nowhere, a tundra cat lunges for your throat!",
+      "battle": "Tundra cat"
+    },
+    "__random_event__" : {
+      "message": "You are slowly circled by a pack of wolves...",
+      "battle": ["Wolf", "Wolf", "Wolf"]
+    }
+  ]
+}
+

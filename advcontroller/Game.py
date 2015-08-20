@@ -66,7 +66,7 @@ class Game:
             storynum = storynum + 1
          elif( response == 2 ):
             Output.Main("There are no stores in the wasteland.")
-            the_story.shopping();
+            Output.Main(the_story);
          elif( response == 3 ):
             Output.Main("You sleep fitfully (hp + 1).")
             the_player.healed(1)

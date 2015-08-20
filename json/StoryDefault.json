@@ -276,7 +276,7 @@
                 },
                 {
                    "spell_text" : "turns your efforts against you.",
-                   "effect" : 
+                   "damage" : 
                    {
                       "minimum" : 5,
                       "random" : 15
