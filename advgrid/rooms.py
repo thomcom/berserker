@@ -2,7 +2,7 @@
 import gridgen
 
 class rooms():
-  grid_gen=grid.grid_gen()
+  grid_gen=gridgen.grid_gen()
   room_list={}
 
   def __init__(self):
@@ -15,10 +15,18 @@ class rooms():
     self.room_number="room"
     self.room_number+=str(self.room_count)
     self.room_list[self.room_number]=room 
+    print self.room_number
     self.room_count+=1
+    for room,data in self.room_list.iteritems():
+      for row in data:
+	print " ".join(map(str,row))
+
+  def main(self):
+    self.create_room()
 
 if __name__=='__main__':
-  rooms.create_room()
+  demo=rooms()
+  demo.main()
   
   ## Displays the generated board with a space in between "."s
 #  for room, data in room_list.iteritems():
