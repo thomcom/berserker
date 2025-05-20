@@ -90,7 +90,7 @@ class Player:
      else:
         return False
   def use_mp(self,amount):
-     self.used_mp = self.used_mp - amount
+     self.used_mp += amount
   def get_mp(self):
      return self.max_mp - self.used_mp
   def get_hp(self):
