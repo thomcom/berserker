@@ -20,14 +20,14 @@ class AdvFileJsonDataRetrieve:
       self.storyJson = "./json/StoryDefault.json"
    def __getJson(self,path):
       try:
-         if not isinstance(path,basestring):
+         if not isinstance(path,str):
             raise TypeError("json path not a string")
          classFile = io.open(path)
          classJson = json.loads(classFile.read())
          return classJson
-      except TypeError, err:
+      except TypeError as err:
          Log(Log.FILEERROR,str(err))
-      except Exception, err:
+      except Exception as err:
          Log(Log.DATAERROR,"Error getting json " + str(err))
    def GetArmor(self):
       return self.__getJson(self.armorPath)

@@ -1,11 +1,11 @@
 import json
 import io
-from StringIO import StringIO
+from io import StringIO
 
-from Event import Event
-from Player import Player
-from Monster import Monster
-from Monster import MonsterBuilder
+from .Event import Event
+from .Player import Player
+from .Monster import Monster
+from .Monster import MonsterBuilder
 from advview import ETio
 
 class Menu:
@@ -26,7 +26,6 @@ class MainStory:
       # TODO: Use AdvDataRetrieve
       berserker_file = io.open("./json/StoryDefault.json")
       parsedJson = json.loads(berserker_file.read())
-      print(parsedJson)
       cls.all_stories = [parsedJson]
 
    def __init__(self,the_player):
@@ -41,7 +40,7 @@ class MainStory:
 
    def loadStory(self,story_name):
       Output.Main(story_name)
-      Output.Main(MainStory.all_stories.viewvalues())
+      Output.Main(MainStory.all_stories.values())
       Output.Main(MainStory.all_stories['mainstory']['name'])
 
    def shopping(self):

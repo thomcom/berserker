@@ -1,7 +1,7 @@
 # The Settings class contains all of the defaults required
 # for prompting the user.
 
-from AdvEvents import *
+from .AdvEvents import *
 
 class Settings:
    def __init__(self):

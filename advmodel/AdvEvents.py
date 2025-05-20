@@ -7,7 +7,7 @@ class Event:
       self.prev = None
    def __str__(self):
       result = ""
-      keys = vars(self).keys()
+      keys = list(vars(self).keys())
       for key in keys:
          result += "%s : %s\n" % tuple((key,vars(self)[key]))
       return result

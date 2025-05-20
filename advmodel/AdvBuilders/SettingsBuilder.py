@@ -1,5 +1,5 @@
 from advmodel.AdvBuilders import AbstractBuilder
-from AdvEventsBuilder import *
+from .AdvEventsBuilder import *
 from advmodel.Settings import Settings
 
 class SettingsBuilder(AbstractBuilder):

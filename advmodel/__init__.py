@@ -1,2 +1,2 @@
-from AdvModel import Model
-from Types import Types
+from .AdvModel import Model
+from .Types import Types

@@ -22,4 +22,4 @@ class grid_gen():
   ## Displays the generated board with a space in between "."s
   for row in matrix:
     ## To do:  make this output to grid so it can be edited:
-    print " ".join(map(str,row))
+    print((" ".join(map(str,row))))

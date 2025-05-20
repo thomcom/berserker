@@ -42,13 +42,13 @@ class DieRoll:
       try:
          dieSplit = val.split("d")
          if len(dieSplit) < 2 : raise Exception
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR," DieRoll value ("+armorString+") invalid\n" + str(self))
          return self
 
       try:
          self.dice = int(dieSplit[0])
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR," DieRoll dice ("+armorString+") invalid\n" + str(self))
          return self
 

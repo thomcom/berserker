@@ -1,5 +1,5 @@
-from Player import Player
-from Data import Data
+from .Player import Player
+from .Data import Data
 from advview.ETio import Output
 from advview.ETio import Input
 

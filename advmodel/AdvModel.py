@@ -1,7 +1,7 @@
 # AdvModel stores data for Adventure Game
 from advview import Log
-from AdvDataRetrieve import AdvFileJsonDataRetrieve
-from AdvJsonBuild import AdvJsonBuild
+from .AdvDataRetrieve import AdvFileJsonDataRetrieve
+from .AdvJsonBuild import AdvJsonBuild
 
 class Model:
    def __init__(self):
@@ -26,7 +26,7 @@ class Model:
       # put objects into list
       try:
          testList = objects[0]
-      except Exception, err:
+      except Exception as err:
          objects = [objects]
 
       for obj in objects:

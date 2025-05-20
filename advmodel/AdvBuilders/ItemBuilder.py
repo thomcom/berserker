@@ -11,30 +11,30 @@ class ItemBuilder(AbstractBuilder):
       # Other attributes are optional
       try:
          result.name = self.jsonData["name"]
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR," Item name" + str(self.jsonData))
          return None
 
       try:
          result.text = self.jsonData["text"]
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR," Item text" + str(self.jsonData))
          return None
 
       try:
          result.value = self.jsonData["value"]
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR," Item value" + str(self.jsonData))
          return None
 
       try:
          result.usability = self.jsonData["usability"]
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR," Item usability" + str(self.jsonData))
 
       try:
          result.salable = self.jsonData["salable"]
-      except Exception, err:
+      except Exception as err:
          # default is salable, if no entry then the object should be salable
          pass
 
