@@ -1,5 +1,5 @@
 import random
-from Data import Data
+from .Data import Data
 from advview.ETio import Output
 
 class Player:

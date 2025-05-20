@@ -1,8 +1,8 @@
-from Player import Player
+from .Player import Player
 from advview.ETio import *
 import random
 import math
-from Data import Data
+from .Data import Data
 
 class Monster(Player):
    monster_list = [

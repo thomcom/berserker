@@ -3,7 +3,7 @@
 
 import json
 from advview import Log
-from AdvBuilders import *
+from .AdvBuilders import *
 
 class JsonBuildTypes:
    TYPE = "object-type"
@@ -48,7 +48,7 @@ class AdvJsonBuild:
             JsonBuildTypes.WEAPONS: WeaponsBuilder()
          } [type]
          return result
-      except KeyError, err:
+      except KeyError as err:
          Log(Log.BUILDERROR,"Object key " + type + " not a valid AdvJson object")
          return None
       
@@ -56,10 +56,10 @@ class AdvJsonBuild:
       try:
          # jsonDict may be a list of dictionaries
          listTest = jsonData[0]
-      except KeyError, err:
+      except KeyError as err:
          # or it is a dictionary, so insert it into a list for simplicity
          jsonData = [jsonData]
-      except Exception, err:
+      except Exception as err:
          # or there was an error
          Log(Log.BUILDERROR,"AdvJsonBuild unable to build an object " + str(jsonData))
          return None
@@ -69,7 +69,7 @@ class AdvJsonBuild:
       for jsonDict in jsonData:
          try:
             builder = self.__getBuilder(jsonDict[JsonBuildTypes.TYPE])
-         except Exception, err:
+         except Exception as err:
             builder = None
          if None != builder:
             builder.SetJson(jsonDict)

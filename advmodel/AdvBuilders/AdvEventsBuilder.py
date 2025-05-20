@@ -11,7 +11,7 @@ class WelcomeEvBuilder(AbstractBuilder):
          result.opts = str(self.jsonData)["opts"]
          result.deletewarning = str(self.jsonData)["delete-warning"]
          result.toomanytocreate = str(self.jsonData)["too-many-tocreate"]
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading WelcomeEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(str(err.__class__))+str(err))
       return result
@@ -23,7 +23,7 @@ class StandingsEvBuilder(AbstractBuilder):
          result.title = str(self.jsonData)["title"]
          result.select = str(self.jsonData)["select"]
          result.opts = str(self.jsonData)["opts"]
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading StandingsEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(err.__class__)+str(err))
       return result
@@ -35,7 +35,7 @@ class ShopEvBuilder(AbstractBuilder):
          result.title = str(self.jsonData)["title"]
          result.select = str(self.jsonData)["select"]
          result.opts = str(self.jsonData)["opts"] 
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading ShopEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(err.__class__)+str(err))
       return result
@@ -48,7 +48,7 @@ class SellItemEvBuilder(AbstractBuilder):
          result.select = str(self.jsonData)["select"]
          result.confirm = str(self.jsonData)["confirm"] 
          result.done = str(self.jsonData)["done"] 
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading SellItemEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(err.__class__)+str(err))
       return result
@@ -58,7 +58,7 @@ class RewardEvBuilder(AbstractBuilder):
       result = RewardEv()
       try:
          result.title = str(self.jsonData)["title"] 
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading RewardEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(err.__class__)+str(err))
       return result
@@ -68,7 +68,7 @@ class QuitEvBuilder(AbstractBuilder):
       result = QuitEv()
       try:
          result.title = str(self.jsonData)["title"] 
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading QuitEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(err.__class__)+str(err))
       return result
@@ -79,7 +79,7 @@ class PlayerMakeEvBuilder(AbstractBuilder):
       try:
          result.entername = str(self.jsonData)["enter-name"] 
          result.chooseclass = str(self.jsonData)["choose-class"] 
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading PlayerMakeEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(err.__class__)+str(err))
       return result
@@ -93,7 +93,7 @@ class PlayerInfoEvBuilder(AbstractBuilder):
          result.achievements = str(self.jsonData)["achievements"] 
          result.standings = str(self.jsonData)["standings"] 
          result.opts = str(self.jsonData)["opts"] 
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading PlayerInfoEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(err.__class__)+str(err))
       return result
@@ -103,7 +103,7 @@ class DecideEvBuilder(AbstractBuilder):
       result = DecideEv()
       try:
          result.title = str(self.jsonData)["title"] 
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading DecideEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(err.__class__)+str(err))
       return result
@@ -116,7 +116,7 @@ class BuyItemEvBuilder(AbstractBuilder):
          result.equipreminder = str(self.jsonData)["equip-reminder"] 
          result.usereminder = str(self.jsonData)["use-reminder"] 
          result.noncombat = str(self.jsonData)["non-combat"] 
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading BuyItemEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(err.__class__)+str(err))
       return result
@@ -130,7 +130,7 @@ class AchievementsEvBuilder(AbstractBuilder):
          result.total = str(self.jsonData)["total"] 
          result.select = str(self.jsonData)["select"] 
          result.opts = str(self.jsonData)["opts"] 
-      except Exception, err:
+      except Exception as err:
          Log(Log.BUILDERROR,"Problem reading AchievementsEv from " + str(self.jsonData))
          Log(Log.BUILDERROR,str(err.__class__)+str(err))
       return result

@@ -1,3 +1,3 @@
-from Controller import Controller
-from Game import Game
+from .Controller import Controller
+from .Game import Game
 
