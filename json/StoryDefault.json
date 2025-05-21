@@ -90,19 +90,21 @@
              "attack" : [ "bites!", "grabs with tiny claws!" ],
              "delay" : [ "scampers around" ]
           },
-          "loot" :
-          {
-             "item" : "rat pelt"
-          }
-       },
-       {
+         "loot" :
+         {
+            "item" : "rat pelt"
+          },
+          "corpse_message" : "You found %s on its smoldering corpse!"
+      },
+      {
           "object_type" : "monster",
           "name" : "Furry Wolverine",
           "level" : 2,
           "battle" :
           {
              "attack" : [ "roars and lunges!", "tries to shake you in its mouth!" ]
-          }
+          },
+          "corpse_message" : "You found %s on its smoldering corpse!"
        },
        {
           "object_type" : "monster",
@@ -112,18 +114,19 @@
           {
              "attack" : [ "slashes at you with his axe!", "tries to clobber you!" ]
           },
-          "loot" :
-          {
-             "item" : "obsidian axe",
-             "item" : "knife",
-             "gold" :
-             {
-                "minimum" : 50,
-                "random" : 100
-             }
-          }
-       },
-       {
+         "loot" :
+         {
+            "item" : "obsidian axe",
+            "item" : "knife",
+            "gold" :
+            {
+               "minimum" : 50,
+               "random" : 100
+            }
+          },
+          "corpse_message" : "You found %s on its smoldering corpse!"
+      },
+      {
           "object_type" : "monster",
           "name" : "Assassin",
           "level" : 4,
@@ -131,19 +134,20 @@
           {
              "attack" : [ "tries to murder you!", "is about to murder the Chieftan!" ]
           },
-          "loot" :
-          {
-             "item" : "assassin's blade",
-             "gold" :
-             {
-                "minimum" : 100,
-                "random" : 200
-             },
-             "item" : "healing potion",
-             "item" : "poison salve"
-          }
-       },
-       {
+         "loot" :
+         {
+            "item" : "assassin's blade",
+            "gold" :
+            {
+               "minimum" : 100,
+               "random" : 200
+            },
+            "item" : "healing potion",
+            "item" : "poison salve"
+          },
+          "corpse_message" : "You found %s on its smoldering corpse!"
+      },
+      {
           "object_type" : "monster",
           "name" : "Throk Chief of Wind",
           "level" : 6,
@@ -160,18 +164,19 @@
                 }
              }
           },
-          "loot" :
-          {
-             "item" : "Blade of Throk",
-             "gold" :
-             {
-                "minimum" : 200,
-                "random" : 200
-             },
-             "item" : "healing potion"
-          }
-       },
-       {
+         "loot" :
+         {
+            "item" : "Blade of Throk",
+            "gold" :
+            {
+               "minimum" : 200,
+               "random" : 200
+            },
+            "item" : "healing potion"
+          },
+          "corpse_message" : "You found %s on its smoldering corpse!"
+      },
+      {
           "object_type" : "monster",
           "name" : "Groth Forest Chieftan",
           "level" : 6,
@@ -179,17 +184,18 @@
           {
              "attack" : [ "tries to unseat you from your growing empire.", "wields his axe with prowess.", "tries to headbutt!" ]
           },
-          "loot" :
-          {
-             "item" : "ancient helmet",
-             "gold" :
-             {
-                "minimum" : 15,
-                "random" : 10
-             }
-          }
-       },
-       {
+         "loot" :
+         {
+            "item" : "ancient helmet",
+            "gold" :
+            {
+               "minimum" : 15,
+               "random" : 10
+            }
+          },
+          "corpse_message" : "You found %s on its smoldering corpse!"
+      },
+      {
           "object_type" : "monster",
           "name" : "Strange Chieftan",
           "level" : 7,
@@ -197,16 +203,17 @@
           {
              "attack" : [ "wields razor sharp claws!", "intends to rule over all of the clans.  He attacks!" ]
           },
-          "loot" :
-          {
-             "gold" :
-             {
-                "minimum" : 1500,
-                "random" : 1000
-             }
-          }
-       },
-       {
+         "loot" :
+         {
+            "gold" :
+            {
+               "minimum" : 1500,
+               "random" : 1000
+            }
+          },
+          "corpse_message" : "You found %s on its smoldering corpse!"
+      },
+      {
           "object_type" : "monster",
           "name" : "Frost Giant",
           "level" : 8,
@@ -237,14 +244,15 @@
                 "name" : "ruby",
                 "chance" : 50
              },
-             "item" :
-             {
-                "name" : "ingot",
-                "chance" : 30
-             }
-          }
-       },
-       {
+            "item" :
+            {
+               "name" : "ingot",
+               "chance" : 30
+            }
+          },
+          "corpse_message" : "You found %s on its smoldering corpse!"
+      },
+      {
           "object_type" : "monster",
           "name" : "Spirit of the Curse",
           "level" : 9,
@@ -282,8 +290,9 @@
                       "random" : 15
                    }
                 }
-             ]  
-          }
+            ]
+          },
+          "corpse_message" : "You found %s on its smoldering corpse!"
        },
        {
           "object_type" : "monster",
@@ -316,10 +325,11 @@
                       "random" : 150
                    }
                 }
-             ]  
-          }
-       }
-     ],
+            ]
+          },
+          "corpse_message" : "You found %s on its smoldering corpse!"
+      }
+    ],
      "items" :
      [
        {

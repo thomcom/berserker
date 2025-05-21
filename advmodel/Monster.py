@@ -37,15 +37,38 @@ class Monster(Player):
       Output.Log("Attack: " + str(self.attack_die))
       Output.Log("XP:    " + str(self.xp_value))
       Output.Log("Battle: " + str(self.battle))
-      try:
-         Output.Log("Loot: " + str(self.loot))
-      except:
-         Output.Log("No loot")
-   def reward(self,player):
-      Output.Main("=== You earn " + str(self.get_xp_value()) + "xp! ===")
-      player.xp = player.xp + self.get_xp_value()
-      if self.loot:
-          Output.Log(self.loot)
+      # Loot is processed after battle; don't log it here
+  def reward(self,player):
+     Output.Main("=== You earn " + str(self.get_xp_value()) + "xp! ===")
+     player.xp = player.xp + self.get_xp_value()
+     found = []
+     if self.loot:
+        loot_entries = self.loot if isinstance(self.loot, list) else [self.loot]
+        for entry in loot_entries:
+           if isinstance(entry, dict):
+              item = entry.get('item')
+              if item:
+                 if isinstance(item, dict):
+                    chance = int(item.get('chance', 100))
+                    if random.randint(1, 100) <= chance:
+                       player.add_item(item.get('name'))
+                       found.append(item.get('name'))
+                 else:
+                    player.add_item(item)
+                    found.append(item)
+              gold = entry.get('gold')
+              if gold:
+                 minimum = int(gold.get('minimum', 0))
+                 rand = int(gold.get('random', 0))
+                 amount = minimum + random.randint(0, rand)
+                 player.add_gold(amount)
+                 found.append(f"{amount}g")
+           elif isinstance(entry, str):
+              player.add_item(entry)
+              found.append(entry)
+     if found:
+        msg = getattr(self, 'corpse_message', "You found %s on its smoldering corpse!")
+        Output.Main(msg % (" and ".join(found)))
 
 class MonsterBuilder:
    def __init__(self):
@@ -63,6 +86,7 @@ class MonsterBuilder:
          monster.xp_value = int(math.pow(monster.level,4) + 4)
          monster.battle = json['battle']
          monster.loot = json.get('loot')
+         monster.corpse_message = json.get('corpse_message')
          monster.is_lethal = True
          if 'lethal' in json:
             monster.is_lethal = json['lethal']

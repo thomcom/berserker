@@ -55,7 +55,7 @@ class Player:
      self.class_type = "Classless"
      self.name       = name
      self.level      = 1
-     self.xp         = 0 
+     self.xp         = 0
      self.max_hp     = 4
      self.max_mp     = 0
      self.damage     = 0
@@ -63,6 +63,8 @@ class Player:
      self.attack_die = 2
      self.initiative = 1
      self.story_progress = 0
+     self.inventory = []
+     self.gold = 0
   def create(self,class_type):
      self.class_type = class_type
      for i in range( len( self.class_list ) ):
@@ -97,3 +99,11 @@ class Player:
      return str(self.max_hp - self.damage) + "/" + str(self.max_hp)
   def get_attack_damage(self):
      return random.randint(1,self.attack_die)
+  def add_item(self,item):
+     self.inventory.append(item)
+  def get_inventory(self):
+     return list(self.inventory)
+  def add_gold(self,amount):
+     self.gold += amount
+  def get_gold(self):
+     return self.gold
