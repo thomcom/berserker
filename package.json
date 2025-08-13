@@ -1,0 +1,18 @@
+{
+  "name": "berserker",
+  "version": "1.0.0",
+  "description": "Run with: python game_base_file_py",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  }
+}
